@@ -1,3 +1,3 @@
-week 1 push
-
-one more
+Chia-Yuan Kuo 010769889
+Communication
+It was 09/10/16 that I met the team, and we quickly scheduled our regular meeting on every Thursday, used Google Docs as a platform to take down essentials in our following meetings, and took advantages of Wechat (whatsapp-like messaging software) to exchange instant information as well.  In the first meeting on 09/15/16, we smoothly went through the future work in our team project.  We reviewed the website "CS unplugged" and decided our topic of the project as "Quicksort" and our extra credit product as "Binary search".  Then, we moved on to coordinating the tools to be used in the project, such as Github, SourceTree, and Diffmerge.  Although some of team members (for example, me) were not so familiar with those tools, other experienced members were very helpful and were willing to coach step by step, so that we picked up some basic operations, such as commit, push, merge, and pull of those tools in a very short time.  In view of the great communication skills among our team, I believe our team could work productively.
