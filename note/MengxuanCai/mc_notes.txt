@@ -1,0 +1,87 @@
+9/17/2016
+
+quiz notes
+
+1 product owner responsibility:
+a: final say on the order of the product backlog
+
+b: says sprint its done, then its done
+
+c: if the CEO asks DT to make a change to the current sprint. DT call PO and po can work with the CEO
+
+d: present to review and adjust the sprint work selected
+
+2 Development responsibility(3-9/5-9):
+
+a: registering the work estimates during a sprint
+b: should have all the skill needed to: turn the product backlog items it selects into an increment of potentially shippable product functionality
+
+c: DT has to to as much as it has told the PO will be done for every Product Backlog item it selects in conformance with the definition of done.
+
+d: present to review and adjust the sprint work selected
+
+e:required to attend the daily scrum
+
+f: during the first sprint: Deliver an increment of potentially shippable functionality, Nail down the complete architecture and infrastructure
+
+h:DT never volunteer to own a sprint backlog items, must own by entire team
+
+g: best describe the definition of”done” :
+all DT has a definition of done and make their own definition clear to all other teams so the difference are known
+
+
+
+3 same place to hold daily scrum:
+
+reduces complexity and overhead
+
+4 scrum master responsibility:
+a: make sure that DT has a daily scrum
+
+b: Teach the Development Team to keep the Daily Scrum within the 15 minute timebox.
+
+c:to keeps a DT working at its highest level of productivity, scrum master can facilite Development Team decisions and remove impediments.
+
+5 Sprint && timebox:
+a sprint review: when the scrum team an stakeholder inspect the outcome of the sprint and figure out what to do in the upcoming sprint.
+b:time box for the complete sprint planing meeting: 8hours for a month sprint. less is shorter.
+
+c: Sprint Planning Meeting … a time boxed meeting (~5% of sprint duration).
+	During the first half, the team decides “what” to complete during the sprint from the product backlog and defines a sprint goal.
+	During the second half of the meeting the team decides “how” to complete the selected backlog items.
+
+d:Sprint Review … a time boxed meeting (~5% of sprint duration).
+	Product owner identifies what has been done.
+	Team reports on what went well and what went bad during the sprint.
+	Team demonstrates the work done.
+
+e:Sprint Retrospective … three hour time-boxed meeting.
+Team inspects the last sprint in terms of people, process, collaboration, tools, etc.
+Identify actions that can be implemented in the next sprint to improve.
+
+f: Daily Scrum Meeting … time-boxed 15-minute meeting, during which each member explains:
+What has been accomplished since the last meeting
+What will be done next before the next meeting
+What any obstacles/impediments have emerged
+
+g: when the time box expires, the sprint is over
+
+h: maximum length of the sprint review(its time box) : 4HOURS for a monthly sprint, lead is shorter.
+
+i:the next sprint begin immediately after the conclusion of the previous one
+
+j:daily scrum time box :15min
+
+6 best describe scrum : A framework within which complex products in complex environments are developed.
+
+7 3 pillars of empirical process control are:
+inspection transparently adaptation.
+
+8 multi team working together should maintain just one product backlog
+
+9:An organization has decided to adopt Scrum, but management wants tochange the terminology to fit with terminology already used. What willlikely happen if this is done?
+
+a:Without a new vocabulary as a reminder of the change, very little change mayactually happen
+b:The organization may not understand what has changed with Scrum and thebenefits of Scrum may be lost.
+c:Management may feel less anxious.
+all above are right.
