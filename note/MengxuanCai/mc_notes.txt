@@ -85,3 +85,8 @@ a:Without a new vocabulary as a reminder of the change, very little change maya
 b:The organization may not understand what has changed with Scrum and thebenefits of Scrum may be lost.
 c:Management may feel less anxious.
 all above are right.
+
+10: scrum :burn down chart.
+xp:wall chart
+kanban:cumulative flow
+water fall: gantt charts
