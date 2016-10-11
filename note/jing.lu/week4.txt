@@ -1,0 +1,7 @@
+Name: Jing Lu
+SID: 010827271
+Topic: Communication
+
+Last week we created project schedule sheet to keep the track of project progress. This week, we still discussed the project as before in library. The focus of this week went into the details of project structure. Details were discussed like what kind of classes and functions we need to realize the demo we’ve thought about before. We’ve carried a lot of communication and discussion on the classes, objects and functions because they play a critical role in the architecture of the project. 
+
+By far, we have not started the coding process because we believe that deep communication of the project and the user requirement is necessary before we start on coding. It usually takes more time when user requirement or the design is changed half way. This week we tried to get agreement on the final design and structure before we really begin on splitting the coding tasks. At the same time, we also tried to implement the knowledge learnt from class to our projects including UML diagrams and etc. We hoped that evaluating the projects from different perspective could help us to get deep understanding of the project and more fluent process of the implementation. 
