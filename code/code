@@ -1,11 +1,102 @@
-code
-Rggggg
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class QuickSort here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class QuickSort extends Actor
+{
+    int pivot;
+    Message m = new Message();
+    Number[] number;
+    public QuickSort(Number[] numbers) {
+        Set<Number> numbers = new HashSet<>();
+        while(set.size() < 8) {
+            set.add(new Number((int) Math.random() * 20);
+        }
+    
+    }
+    public void act() 
+    {
+        // Add your action code here.
+    } 
+    //pick pivot in array
+    public int pickPivot(){
+        
+    }    
+    //move pivot to the position
+    public int movePivot() {
+    }
+    //check if the number fits the position
+    public boolean check() {
+    }
+    //check if it is the right time to end
+    public boolean caculate(int start, int end) {
+    }
+    //check error times
+    public int errorCount() {
+    }
+
+    
+}
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class Number here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Number extends Actor
+{
+    int value;
+    GreenfootImage image = this.getImage();
+    image.scale(70, 70);
+    public Number(int value) {
+        this.value = value;
+    }
+    public void act() 
+    {
+        if(Greenfoot.mouseDragged(this)) {
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            int mouseX = mouse.getX();
+            int mouseY = mouse.getY();
+            this.setLocation(mouseX, mouseY);
+        }
+    }
+    @override
+    // override getimage function, so we can get image file seperately.
+    public void getImage(int number) {
+        
+    }
+}
 
 
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * Write a description of class MyWorld here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class QuickSortWorld extends World
+{
 
-
-hello
-
-
-wtt Test11
+    /**
+     * Constructor for objects of class MyWorld.
+     * 
+     */
+    public QuickSortWorld()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(800, 600, 1); 
+        this.prepare();
+    }
+    private void Prepare(){
+        
+        
+    }
+}
