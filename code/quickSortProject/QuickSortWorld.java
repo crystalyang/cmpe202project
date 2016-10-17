@@ -19,7 +19,7 @@ public class QuickSortWorld extends World
         super(800, 600, 1); 
         this.prepare();
     }
-    private void Prepare(){
+    private void prepare(){
         
         
     }
