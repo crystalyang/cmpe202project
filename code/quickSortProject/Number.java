@@ -10,10 +10,12 @@ public class Number extends Actor
 {
     int value;
     GreenfootImage image = this.getImage();
-    image.scale(70, 70);
-    public Number(int value) {
+    //image.scale(70, 70);
+    
+    Number(int value) {
         this.value = value;
     }
+    
     public void act() 
     {
         if(Greenfoot.mouseDragged(this)) {
@@ -23,7 +25,7 @@ public class Number extends Actor
             this.setLocation(mouseX, mouseY);
         }
     }
-    @override
+    //@override
     // override getimage function, so we can get image file seperately.
     public void getImage(int number) {
         

@@ -1,4 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
+import java.util.*;// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class QuickSort here.
@@ -13,35 +14,37 @@ public class QuickSort extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int pivot;
-    Message m = new Message();
-    Number[] number;
+    //Message m = new Message();
+    Number[] numbers;
     public QuickSort(Number[] numbers) {
-        Set<Number> numbers = new HashSet<>();
+        Set<Number> set = new HashSet<>();
         while(set.size() < 8) {
-            set.add(new Number((int) Math.random() * 20);
+            int n = (int)Math.random() * 20;
+            Number number = new Number(n);
+            set.add(number);
         }
-    
+        numbers = set.toArray(new Number[set.size()]);
     }
     public void act() 
     {
         // Add your action code here.
     } 
     //pick pivot in array
-    public int pickPivot(){
+    //public int pickPivot(){
         
-    }    
+    //}    
     //move pivot to the position
-    public int movePivot() {
-    }
+    //public int movePivot() {
+    //}
     //check if the number fits the position
-    public boolean check() {
-    }
+    //public boolean check() {
+    //}
     //check if it is the right time to end
-    public boolean caculate(int start, int end) {
-    }
+    //public boolean caculate(int start, int end) {
+    //}
     //check error times
-    public int errorCount() {
-    }
+   // public int errorCount() {
+    //}
 
     
 }
