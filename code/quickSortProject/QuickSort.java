@@ -19,7 +19,7 @@ public class QuickSort extends Actor
     public QuickSort() {
         Set<Number> set = new HashSet<>();
         while(set.size() < 8) {
-            int n = (int)Math.random() * 20;
+            int n = (int)(Math.random() * 20);
             Number number = new Number(n);
             set.add(number);
         }

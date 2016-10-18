@@ -12,7 +12,7 @@ public class Number extends Actor
     GreenfootImage image = this.getImage();
     //image.scale(70, 70);
     
-    Number(int value) {
+    public Number(int value) {
         this.value = value;
     }
     
