@@ -20,6 +20,8 @@ public class QuickSortWorld extends World
         this.prepare();
     }
     private void prepare(){
+        QuickSort quickSort = new QuickSort();
+        addObject(quickSort, 367, 237);
         
         
     }

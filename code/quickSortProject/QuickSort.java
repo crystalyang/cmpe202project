@@ -15,6 +15,7 @@ public class QuickSort extends Actor
      */
     int pivot;
     //Message m = new Message();
+<<<<<<< HEAD
     Number[] numbers=new Number;
     Number[] numbers;
     public QuickSort() {
@@ -23,9 +24,31 @@ public class QuickSort extends Actor
             int n = (int)Math.random() * 20;
             Number number = new Number(n);
             set.add(number);
+=======
+    Number[] numbers=new Number[8];
+    
+    
+    public QuickSort(){
+     List<Integer> numberList=new ArrayList<>();
+     Random rd=new Random();
+     while(numberList.size()<8){
+        int num=rd.nextInt(21);
+        if(!numberList.contains(num)){
+            numberList.add(num);
         }
-        numbers = set.toArray(new Number[set.size()]);
+        
+        }
+        
+        Integer[] listRandom=numberList.toArray(new Integer[numberList.size()]);
+        for(int i=0;i<listRandom.length;i++){
+            numbers[i]=new Number((int)listRandom[i]);    
+>>>>>>> c738c6bfdba6f99af7f4c4f1da3243fd421c7468
+        }
     }
+    
+    
+    
+    
     public void act() 
     {
         // Add your action code here.
