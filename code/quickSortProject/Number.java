@@ -9,10 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Number extends Actor
 {
     int value;
-    GreenfootImage image = this.getImage();
+    //GreenfootImage image = this.getImage();
     //image.scale(70, 70);
     
-    public Number(int value) {
+    Number(int value) {
         this.value = value;
     }
     
