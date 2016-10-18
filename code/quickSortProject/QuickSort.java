@@ -15,7 +15,7 @@ public class QuickSort extends Actor
      */
     int pivot;
     //Message m = new Message();
-    Number[] numbers;
+    Number[] numbers=new Number;
     public QuickSort() {
         Set<Number> set = new HashSet<>();
         while(set.size() < 8) {
