@@ -23,40 +23,18 @@ public class QuickSort extends Actor
     int start;
     int end;
     //Message m = new Message();
-<<<<<<< HEAD
-    Number[] numbers=new Number;
-    Number[] numbers;
-    public QuickSort() {
-        Set<Number> set = new HashSet<>();
-        while(set.size() < 8) {
-            int n = (int)Math.random() * 20;
-            Number number = new Number(n);
-            set.add(number);
-=======
-    Number[] numbers=new Number[8];
-    
-    
+    Number[] numbers= new Number[8];
     public QuickSort(){
-     List<Integer> numberList=new ArrayList<>();
-     Random rd=new Random();
-     while(numberList.size()<8){
-        int num=rd.nextInt(21);
-        if(!numberList.contains(num)){
-            numberList.add(num);
+        Set<Number> set = new HashSet<>();   
+        while (set.size() < 8) {
+            Number rd = new Number((int)(Math.random() * 21));
+            if (set.contains(rd)) {
+                continue;
+            }
+            set.add(rd);
         }
-        
-        }
-        
-        Integer[] listRandom=numberList.toArray(new Integer[numberList.size()]);
-        for(int i=0;i<listRandom.length;i++){
-            numbers[i]=new Number((int)listRandom[i]);    
->>>>>>> c738c6bfdba6f99af7f4c4f1da3243fd421c7468
-        }
+        numbers = set.toArray(new Number[8]);  
     }
-    
-    
-    
-    
     public void act() 
     {
         // Add your action code here.
