@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * This class initiates all objects.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -19,7 +19,9 @@ public class QuickSortWorld extends World
         super(800, 600, 1); 
         this.prepare();
     }
-    private void Prepare(){
+    private void prepare(){
+        QuickSort quickSort = new QuickSort();
+        addObject(quickSort, 367, 237);
         
         
     }
