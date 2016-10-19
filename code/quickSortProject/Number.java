@@ -1,14 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Number here.
- * 
+ * This class has three responsibilities:
+ * 1)records the value created randomly by QuckSort.
+ * 2)records the position of the number after it is moved.
+ * 3)creates image based on the random number
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Number extends Actor
 {
     int value;
+    int position;
     //GreenfootImage image = this.getImage();
     //image.scale(70, 70);
     

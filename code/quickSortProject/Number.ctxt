@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Number
-comment0.text=\n\ Write\ a\ description\ of\ class\ Number\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ This\ class\ has\ three\ responsibilities\:\n\ 1)records\ the\ value\ created\ randomly\ by\ QuckSort.\n\ 2)records\ the\ position\ of\ the\ number\ after\ it\ is\ moved.\n\ 3)creates\ image\ based\ on\ the\ random\ number\n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=value
 comment1.target=Number(int)
 comment2.params=
