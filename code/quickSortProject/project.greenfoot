@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Oct 19 10:37:46 PDT 2016
+#Wed Oct 19 12:18:05 PDT 2016
 readme.name=@README
 class.Number.superclass=greenfoot.Actor
 target2.name=Number
@@ -34,26 +34,26 @@ readme.y=10
 target3.name=QuickSortWorld
 class.QuickSort.superclass=greenfoot.Actor
 readme.x=10
-mainWindow.width=850
 target1.typeParameters=
+mainWindow.width=850
 dependency2.from=QuickSortWorld
 target2.width=80
-mainWindow.height=600
-mainWindow.y=40
 target1.width=90
-mainWindow.x=40
+mainWindow.y=40
+mainWindow.height=600
 target3.width=120
+mainWindow.x=40
 editor.fx.0.y=23
 editor.fx.0.x=0
 readme.width=47
-target2.type=ClassTarget
 target3.showInterface=false
+target2.type=ClassTarget
 world.lastInstantiated=QuickSortWorld
 editor.swing.0.height=700
 dependency1.type=UsesDependency
 version=2.8.0
 package.numDependencies=2
 project.charset=UTF-8
-readme.height=58
 class.QuickSortWorld.superclass=greenfoot.World
+readme.height=58
 dependency2.to=QuickSort
