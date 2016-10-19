@@ -2,8 +2,14 @@ import greenfoot.*;
 import java.util.*;// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class QuickSort here.
- * 
+ This class have sevearl responsibilities.
+ 1) create random numbers
+ 2) count the errors. When error number = 3, game ends.
+ 3) check whether user put number in the correct grid
+ 4) check whether the sorting operation for a pivot ends
+ 5) check whether game ends
+ 6) update grid background color according to game phase
+ 7) calculate operational numbers and correct sequence of them in the backend
  * @author (your name) 
  * @version (a version number or a date)
  */
@@ -14,6 +20,8 @@ public class QuickSort extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int pivot;
+    int start;
+    int end;
     //Message m = new Message();
 <<<<<<< HEAD
     Number[] numbers=new Number;
