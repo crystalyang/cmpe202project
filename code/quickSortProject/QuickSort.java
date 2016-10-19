@@ -22,18 +22,29 @@ public class QuickSort extends Actor
     int pivot;
     int start;
     int end;
+
     //Message m = new Message();
     Number[] numbers= new Number[8];
     public QuickSort(){
         Set<Number> set = new HashSet<>();   
+        boolean check_set;
         while (set.size() < 8) {
+            check_set=true;
             Number rd = new Number((int)(Math.random() * 21));
-            if (set.contains(rd)) {
-                continue;
+            for(Iterator<Number> i=set.iterator();i.hasNext();){
+                Number f=i.next();
+               if(f.equals(rd)){
+                   check_set=false;
+                   break;
+                }
             }
-            set.add(rd);
+            if(check_set){
+                System.out.println(rd.value);
+                set.add(rd);
+            }
         }
-        numbers = set.toArray(new Number[8]);  
+        numbers = set.toArray(new Number[8]);
+        
     }
     public void act() 
     {

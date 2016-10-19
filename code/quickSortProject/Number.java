@@ -31,7 +31,12 @@ public class Number extends Actor
     }
     //@override
     // override getimage function, so we can get image file seperately.
-    public void getImage(int number) {
+    /*public void getImage(int number) {
         
+    }*/
+    
+    public boolean equals(Number n_obj){
+        return (n_obj.value==this.value); 
     }
+    
 }
