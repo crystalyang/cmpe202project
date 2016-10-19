@@ -11,7 +11,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Number extends Actor
 {
     int value;
-    int position;
+    // x, y indicate the position to which Number is dragged
+    int x, y;
     //GreenfootImage image = this.getImage();
     //image.scale(70, 70);
     
