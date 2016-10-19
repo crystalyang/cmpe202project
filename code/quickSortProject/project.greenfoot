@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Oct 17 15:37:30 PDT 2016
+#Tue Oct 18 13:25:41 PDT 2016
 readme.name=@README
 class.Number.superclass=greenfoot.Actor
 target2.name=Number
@@ -35,16 +35,16 @@ readme.x=10
 mainWindow.width=850
 target1.typeParameters=
 target2.width=80
-mainWindow.height=600
-target1.width=90
 mainWindow.y=40
-mainWindow.x=40
+target1.width=90
+mainWindow.height=600
 target3.width=120
+mainWindow.x=40
 editor.fx.0.y=52
 editor.fx.0.x=320
 readme.width=47
-target2.type=ClassTarget
 target3.showInterface=false
+target2.type=ClassTarget
 world.lastInstantiated=MyWorld
 editor.swing.0.height=700
 dependency1.type=UsesDependency
