@@ -2,6 +2,7 @@
 class.Number.superclass=greenfoot.Actor
 class.Position.superclass=greenfoot.Actor
 class.QuickSort.superclass=greenfoot.Actor
+class.QuickSortWorld.image=background2.jpg
 class.QuickSortWorld.superclass=greenfoot.World
 class.quickSortWorld.superclass=greenfoot.World
 dependency1.from=QuickSort
