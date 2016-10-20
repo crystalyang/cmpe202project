@@ -39,8 +39,10 @@ public class QuickSort extends Actor
                 }
             }
             if(check_set){
-                System.out.println(rd.value);
+                //System.out.println(rd.value);
                 set.add(rd);
+                System.out.println(rd.getFile());
+                rd.setImage(rd.getFile());
             }
         }
         numbers = set.toArray(new Number[8]);
@@ -50,6 +52,16 @@ public class QuickSort extends Actor
     {
         // Add your action code here.
     } 
+    //add number images to the world
+    protected void addedToWorld(World world){  
+        int i=1;
+        for(Number n:numbers){
+            GreenfootImage img = n.getImage();
+            img.scale(img.getWidth()-30,img.getHeight()-50);
+            world.addObject(n,100*i,100);
+            i+=1;
+        }
+    }
     //pick pivot in array
     //public int pickPivot(){
         

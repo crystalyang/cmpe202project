@@ -16,8 +16,13 @@ public class Number extends Actor
     //GreenfootImage image = this.getImage();
     //image.scale(70, 70);
     
+    
     Number(int value) {
         this.value = value;
+    }
+    
+    public String getFile(){
+        return (this.value + ".png");
     }
     
     public void act() 
@@ -28,13 +33,9 @@ public class Number extends Actor
             int mouseY = mouse.getY();
             this.setLocation(mouseX, mouseY);
         }
-    }
-    //@override
-    // override getimage function, so we can get image file seperately.
-    /*public void getImage(int number) {
-        
-    }*/
-    
+       // setImage(filename);
+    }    
+    //override equals
     public boolean equals(Number n_obj){
         return (n_obj.value==this.value); 
     }
