@@ -11,12 +11,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Number extends Actor
 {
     int value;
-    int position;
+    // x, y indicate the position to which Number is dragged
+    int x, y;
     //GreenfootImage image = this.getImage();
     //image.scale(70, 70);
     
+    
     Number(int value) {
         this.value = value;
+    }
+    
+    public String getFile(){
+        return (this.value + ".png");
     }
     
     public void act() 
@@ -27,10 +33,11 @@ public class Number extends Actor
             int mouseY = mouse.getY();
             this.setLocation(mouseX, mouseY);
         }
+       // setImage(filename);
+    }    
+    //override equals
+    public boolean equals(Number n_obj){
+        return (n_obj.value==this.value); 
     }
-    //@override
-    // override getimage function, so we can get image file seperately.
-    public void getImage(int number) {
-        
-    }
+    
 }

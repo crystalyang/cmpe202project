@@ -22,34 +22,46 @@ public class QuickSort extends Actor
     int pivot;
     int start;
     int end;
+
     //Message m = new Message();
-    Number[] numbers=new Number[8];
-    
-    
+    Number[] numbers= new Number[8];
     public QuickSort(){
-     List<Integer> numberList=new ArrayList<>();
-     Random rd=new Random();
-     while(numberList.size()<8){
-        int num=rd.nextInt(21);
-        if(!numberList.contains(num)){
-            numberList.add(num);
+        Set<Number> set = new HashSet<>();   
+        boolean check_set;
+        while (set.size() < 8) {
+            check_set=true;
+            Number rd = new Number((int)(Math.random() * 21));
+            for(Iterator<Number> i=set.iterator();i.hasNext();){
+                Number f=i.next();
+               if(f.equals(rd)){
+                   check_set=false;
+                   break;
+                }
+            }
+            if(check_set){
+                //System.out.println(rd.value);
+                set.add(rd);
+                System.out.println(rd.getFile());
+                rd.setImage(rd.getFile());
+            }
         }
+        numbers = set.toArray(new Number[8]);
         
-        }
-        
-        Integer[] listRandom=numberList.toArray(new Integer[numberList.size()]);
-        for(int i=0;i<listRandom.length;i++){
-            numbers[i]=new Number((int)listRandom[i]);    
-        }
     }
-    
-    
-    
-    
     public void act() 
     {
         // Add your action code here.
     } 
+    //add number images to the world
+    protected void addedToWorld(World world){  
+        int i=1;
+        for(Number n:numbers){
+            GreenfootImage img = n.getImage();
+            img.scale(img.getWidth()-30,img.getHeight()-50);
+            world.addObject(n,100*i,100);
+            i+=1;
+        }
+    }
     //pick pivot in array
     //public int pickPivot(){
         
