@@ -55,13 +55,26 @@ public class QuickSort extends Actor
     //add number images to the world
     protected void addedToWorld(World world){  
         int i=1;
+        int index = 0;
         for(Number n:numbers){
+            setPos(index++, i, world);
             GreenfootImage img = n.getImage();
-            img.scale(img.getWidth()-30,img.getHeight()-50);
-            world.addObject(n,100*i,100);
+            img.scale(img.getWidth()-35,img.getHeight()-57);
+            world.addObject(n,120*i,100);
+            // add pos image to the quicksort world.
             i+=1;
         }
     }
+    public void setPos(int index, int i, World world) {
+        Position pos = new Position(index);
+            pos.setImage(pos.getFile());
+            GreenfootImage posImg = pos.getImage();
+            posImg.scale(posImg.getWidth() - 650, posImg.getHeight() - 625);
+            world.addObject(pos, 120 * i, 90);
+    }
+    //public Position getPosition() {
+ 
+    //}
     //pick pivot in array
     //public int pickPivot(){
         
