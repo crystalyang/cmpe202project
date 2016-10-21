@@ -14,11 +14,18 @@ public class Position extends Actor
      */
     // x,y indicates the position 
     int x, y;
+    int index;
     //ui array position
     //there will be a static position image, won't move
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+    public Position(int index) {
+        this.index = index;
+    }
+    public String getFile(){
+        return ("position" + ".png");
     }
     public void act() 
     {
