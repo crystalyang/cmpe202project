@@ -60,7 +60,7 @@ public class QuickSort extends Actor
             setPos(index++, i, world);
             GreenfootImage img = n.getImage();
             img.scale(img.getWidth()-35,img.getHeight()-57);
-            world.addObject(n,120*i,100);
+            world.addObject(n,110*i,100);
             // add pos image to the quicksort world.
             i+=1;
         }
@@ -69,8 +69,8 @@ public class QuickSort extends Actor
         Position pos = new Position(index);
             pos.setImage(pos.getFile());
             GreenfootImage posImg = pos.getImage();
-            posImg.scale(posImg.getWidth() - 650, posImg.getHeight() - 625);
-            world.addObject(pos, 120 * i, 90);
+            posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
+            world.addObject(pos, 110 * i, 250);
     }
     //public Position getPosition() {
  
