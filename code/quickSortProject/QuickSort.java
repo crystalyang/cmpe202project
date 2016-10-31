@@ -80,6 +80,9 @@ public class QuickSort extends Actor
     }
     
     
+    
+    
+    
     public void setPos(int index, int i, World world) {
         Position pos = new Position(index);
             pos.setImage(pos.getFile());
