@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class Position here.
  * 
@@ -30,5 +30,15 @@ public class Position extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+    }  
+    
+    
+   //when the number covered the pos, the pos disappear, and the Number take the place
+   public void numberInsteadPos(){
+    List<Number> numbers=getIntersectingObjects(Number.class);
+    
+    
+    
+   
+    }
 }

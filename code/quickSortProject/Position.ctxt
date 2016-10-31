@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=java.lang.String\ getFile()
 comment4.params=
 comment4.target=void\ act()
-numComments=5
+comment5.params=
+comment5.target=void\ numberInsteadPos()
+numComments=6
