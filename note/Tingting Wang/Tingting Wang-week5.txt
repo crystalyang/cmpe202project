@@ -1,0 +1,7 @@
+
+Topic:See the whole
+
+
+For the past three weeks, everything goes well with our schedule. I think good communication and build integrity In are the key values for a success team. 
+Our team members keep in good communication and try to make it as simple as possible. After several weeks of the breaking-in period, we have our routine schedules. We held our meeting every week, with specific issues and concrete aims. All the team members expressed themselves clearly, listened to each other with an open mind without interruption and fixed the problems immediately. We deal with most of our confusions or problems at the meeting. It is a good way to save time because it was easier to come to an agreement when talking face to face. 
+Moreover, our team members behave with integrity. For these weeks, we designed the class diagrams and basic flow diagrams and started to develop our game. However, there were some version control problems because we developed the program parallelly. One of our team members had more experience in fixing conflicts in Github. She shared her experience with us and helped us fixed several serious problems. And now, we are going well in using Github. The high integrity In and the willing to share knowledge contribute to the fluent development of our project and saved us a lot of time. 
