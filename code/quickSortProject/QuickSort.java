@@ -41,11 +41,12 @@ public class QuickSort extends Actor
             if(check_set){
                 //System.out.println(rd.value);
                 set.add(rd);
-                System.out.println(rd.getFile());
+                //System.out.println(rd.getFile());
                 rd.setImage(rd.getFile());
             }
         }
         numbers = set.toArray(new Number[8]);
+        //addedToWorld();
         
     }
     public void act() 
@@ -53,11 +54,12 @@ public class QuickSort extends Actor
         // Add your action code here.
     } 
     //add number images to the world
-    protected void addedToWorld(World world){  
+    protected void addedToWorld(){ 
+        QuickSortWorld world=(QuickSortWorld)getWorld();
         int i=1;
-        int index = 0;
+        //int index = 0;
         for(Number n:numbers){
-            setPos(index++, i, world);
+           // setPos(index++, i, world);
             GreenfootImage img = n.getImage();
             img.scale(img.getWidth()-35,img.getHeight()-57);
             world.addObject(n,110*i,100);
@@ -65,12 +67,27 @@ public class QuickSort extends Actor
             i+=1;
         }
     }
+    
+    //add the next line to the world
+    public void addedToWorldNextLine(){
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        int index=0;
+        for(int j=0;j<8;j++){
+            setPos(index++, j+1, world);
+        }
+    
+    
+    }
+    public int triggerPos() {
+        return 0;
+    }
     public void setPos(int index, int i, World world) {
         Position pos = new Position(index);
             pos.setImage(pos.getFile());
             GreenfootImage posImg = pos.getImage();
             posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
             world.addObject(pos, 110 * i, 250);
+            System.out.println("hello");
     }
     //public Position getPosition() {
  
