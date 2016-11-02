@@ -5,6 +5,8 @@
 <<<<<<<=HEAD
 >>>>>>>=b46266c198a289ddbd83d15220e9d4d64c7a1ed7
 class.Button.superclass=greenfoot.Actor
+<<<<<<< HEAD
+=======
 class.Message.image=msg.png
 class.Message.superclass=greenfoot.Actor
 >>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
@@ -24,6 +26,12 @@ class.quickSortWorld.superclass=greenfoot.World
 dependency1.from=QuickSort
 dependency1.to=Number
 dependency1.type=UsesDependency
+<<<<<<< HEAD
+dependency10.from=Position
+dependency10.to=Number
+dependency10.type=UsesDependency
+=======
+>>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
 dependency2.from=QuickSortWorld
 dependency2.to=QuickSort
 dependency2.type=UsesDependency
@@ -41,6 +49,16 @@ dependency5.type=UsesDependency
 dependency6.from=Start
 dependency6.to=QuickSort
 dependency6.type=UsesDependency
+<<<<<<< HEAD
+dependency7.from=QuickSortWorld
+dependency7.to=Reset
+dependency7.type=UsesDependency
+dependency8.from=Reset
+dependency8.to=QuickSort
+dependency8.type=UsesDependency
+dependency9.from=Reset
+dependency9.to=QuickSortWorld
+=======
 dependency7.from=Reset
 dependency7.to=QuickSortWorld
 dependency7.type=UsesDependency
@@ -49,6 +67,7 @@ dependency8.to=Reset
 dependency8.type=UsesDependency
 dependency9.from=QuickSortWorld
 dependency9.to=Message
+>>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
 dependency9.type=UsesDependency
 >>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
 editor.fx.0.height=700
@@ -56,9 +75,15 @@ editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
 <<<<<<< HEAD
+<<<<<<< HEAD
 editor.swing.0.height=700
 editor.swing.0.width=701
 editor.swing.0.x=0
+=======
+editor.swing.0.height=759
+editor.swing.0.width=789
+editor.swing.0.x=240
+>>>>>>> 6ea870b9b2a0f8b9d0664e66816a29388a66889c
 =======
 editor.swing.0.height=709
 editor.swing.0.width=692
@@ -74,12 +99,21 @@ editor.swing.2.width=701
 editor.swing.2.x=2003
 editor.swing.2.y=-164
 <<<<<<< HEAD
+<<<<<<< HEAD
 mainWindow.height=600
 mainWindow.width=1241
 mainWindow.x=131
 mainWindow.y=119
 package.numDependencies=3
 package.numTargets=4
+=======
+mainWindow.height=803
+mainWindow.width=1440
+mainWindow.x=0
+mainWindow.y=222
+package.numDependencies=10
+package.numTargets=7
+>>>>>>> 6ea870b9b2a0f8b9d0664e66816a29388a66889c
 =======
 mainWindow.height=709
 mainWindow.width=1280
@@ -113,7 +147,11 @@ target2.x=160
 target2.y=10
 target3.height=50
 <<<<<<< HEAD
+<<<<<<< HEAD
 target3.name=Position
+=======
+target3.name=Button
+>>>>>>> 6ea870b9b2a0f8b9d0664e66816a29388a66889c
 =======
 target3.name=Message
 >>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
@@ -134,29 +172,61 @@ target4.x=70
 target4.y=10
 =======
 target3.x=10
+<<<<<<< HEAD
+target3.y=130
+target4.height=50
+target4.name=Position
+=======
 target3.y=190
 target4.height=50
 target4.name=Button
+>>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
 target4.width=80
+<<<<<<< HEAD
+target4.x=170
+target4.y=70
+target5.height=50
+target5.name=Start
+=======
 target4.x=10
 target4.y=130
 target5.height=50
 target5.name=Position
+>>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
 target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
 target5.width=80
+<<<<<<< HEAD
+target5.x=100
+target5.y=130
+target6.height=50
+target6.name=Reset
+=======
 target5.x=170
 target5.y=70
 target6.height=50
 target6.name=Start
+>>>>>>> 59157a45a7700cf57f25cd919aa6eaf1ed41ebe0
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
 target6.width=80
+<<<<<<< HEAD
+target6.x=190
+target6.y=130
+target7.height=50
+target7.name=QuickSortWorld
+target7.showInterface=false
+target7.type=ClassTarget
+target7.typeParameters=
+target7.width=120
+target7.x=70
+target7.y=10
+=======
 target6.x=100
 target6.y=130
 target7.height=50
