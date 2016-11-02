@@ -78,17 +78,16 @@ public class QuickSort extends Actor
     
     
     }
-    
-    
-    
-    
-    
+    public int triggerPos() {
+        return 0;
+    }
     public void setPos(int index, int i, World world) {
         Position pos = new Position(index);
             pos.setImage(pos.getFile());
             GreenfootImage posImg = pos.getImage();
             posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
             world.addObject(pos, 110 * i, 250);
+            System.out.println("hello");
     }
     //public Position getPosition() {
  
