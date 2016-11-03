@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Nov 03 15:37:48 PDT 2016
+#Thu Nov 03 15:56:32 PDT 2016
 dependency9.type=UsesDependency
 target4.type=ClassTarget
 <<<<<<<=HEAD
@@ -81,12 +81,12 @@ class.Button.superclass=greenfoot.Actor
 editor.swing.1.x=2181
 target7.x=190
 dependency9.to=Message
-editor.swing.0.width=0
+editor.swing.0.width=859
 target7.name=Reset
 editor.swing.0.y=23
 target6.y=130
 target1.typeParameters=
-editor.swing.0.x=0
+editor.swing.0.x=144
 target6.x=100
 target1.naviview.expanded=true
 target2.height=50
@@ -130,7 +130,7 @@ target5.typeParameters=
 world.lastInstantiated=QuickSortWorld
 target2.showInterface=false
 mainWindow.height=709
-editor.swing.0.height=0
+editor.swing.0.height=700
 target3.name=Number
 editor.swing.2.height=700
 target7.height=50

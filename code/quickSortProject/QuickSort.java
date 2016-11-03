@@ -75,8 +75,6 @@ public class QuickSort extends Actor
         for(int j=0;j<8;j++){
             setPos(index++, j+1, world);
         }
-    
-    
     }
     
     
