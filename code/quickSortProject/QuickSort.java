@@ -46,9 +46,10 @@ public class QuickSort extends Actor
             }
         }
         numbers = set.toArray(new Number[8]);
-        //addedToWorld();
-        
+       // addedToWorld();
     }
+    
+    
     public void act() 
     {
         // Add your action code here.
@@ -69,20 +70,22 @@ public class QuickSort extends Actor
     }
     
     //add the next line to the world
-    public void addedToWorldNextLine(){
-        QuickSortWorld world=(QuickSortWorld)getWorld();
-        int index=0;
-        for(int j=0;j<8;j++){
-            setPos(index++, j+1, world);
-        }
-    }
+    // public void addedToWorldNextLine(){
+        // QuickSortWorld world=(QuickSortWorld)getWorld();
+        // int index=0;
+        // for(int j=0;j<8;j++){
+            // setPos(index++, j+1, world);
+        // }
+    
+    
+    // }
     
     
     
     
     
-    public void setPos(int index, int i, World world) {
-        Position pos = new Position(index);
+     public void setPos(int index, int i, World world) {
+            Position pos = new Position(index);
             pos.setImage(pos.getFile());
             GreenfootImage posImg = pos.getImage();
             posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
