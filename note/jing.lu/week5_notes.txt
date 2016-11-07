@@ -1,0 +1,15 @@
+Name: Jing Lu	
+SID: 010827271	
+Topic:Build Integrity In
+
+
+This week we had meeting on Monday instead of Thursday in library. The focus is on developing codes based on the schedule we made. There are several main tasks. The first one is to draw a class diagram according to the functions and classes we would like to make. Secondly, we need to collect related materials (they are mostly game images which we would use in the program). Thirdly, we need to develop the program based on the class diagram we draw combined with the pictures we collected and processed. 
+The other major issue lies in the coding style and version control due to the parallel coding. Although everyone is responsible for different functions in different classes, there are always conflicts we need to resolve. We used SourceTree to do version control but there are always conflicts locally and from remote machine. It is quite hard to keep track of the versions but everyone is trying his best and helping each other by remote controlling their computer and fixing the issues. At the same time, most of our team members are still learning the tricks and rules of using github and SourceTree and we also realized that it could be a helpful tool for our project if we could use them well. Of course, it’s also easy to mess the project if the tools are not used in the right way. I argue that this week, building integrity is definitely the major key value for our team because it’s so important and everyone is working very hard on it.
+
+
+
+
+
+
+
+

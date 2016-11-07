@@ -1,0 +1,22 @@
+Name: Jing Lu	
+SID: 010827271	
+Topic: Communication
+
+
+This is the very important week for our team because we are developing the major functions and classes this week. The first user interface has been established from last week including the message info, the grids for user to drag numbers, the number images and the controlling buttons. The next step is to finish the functions and distribute one or two to each team member. The process requires a lot of communication because people need to know what has been developed and what needs to be done. If one or two team members do not tell others what they are doing, it’s highly possible that people are doing the same thing and thus waste a lot of time for developing and debugging. In this case, we all agreed to post a note in our chatting group about the functions we intend to work on. 
+On the Thursday meeting, we also went through the entire use case of our game again to clarify some logical misunderstandings. In addition, we went into more details of the entire process and came up with detailed data structure of some major functions. Every team member is actively engaging in the communication process. 
+For the diagrams, we also agreed to finish it after our game was finished for local users because it’s easier to draw with the functions and classes fully developed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
