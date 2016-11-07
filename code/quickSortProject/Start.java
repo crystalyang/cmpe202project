@@ -20,7 +20,6 @@ public class Start extends Button
     }
     
     // public void clicked(){
-    
      // if(Greenfoot.mouseClicked(this)) {
             // List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             // qs.get(0).addedToWorldNextLine();
@@ -30,24 +29,17 @@ public class Start extends Button
      public void clicked(){
      if(Greenfoot.mouseClicked(this)) {
              QuickSortWorld world=(QuickSortWorld)getWorld();
-            
-             
             //List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             //qs.get(0).addedToWorldNextLine();
             int index=0;
             for(int j=0;j<8;j++){
             setPos(index++, j+1, world);
         }
-        
-         QuickSort quickSort = new QuickSort();
-             world.addObject(quickSort, 367, 237);
-             quickSort.addedToWorld();
-        
-        
+            QuickSort quickSort = new QuickSort();
+            world.addObject(quickSort, 367, 237);
+            quickSort.addedToWorld();
         }
-    
     }
-    
     
     // public void addedToWorldNextLine(){
         // QuickSortWorld world=(QuickSortWorld)getWorld();
@@ -55,8 +47,6 @@ public class Start extends Button
         // for(int j=0;j<8;j++){
             // setPos(index++, j+1, world);
         // }
-    
-    
     // }
    
     
@@ -67,5 +57,4 @@ public class Start extends Button
             posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
             world.addObject(pos, 110 * i, 250);
     }
-    
 }

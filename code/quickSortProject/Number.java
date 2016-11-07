@@ -35,6 +35,8 @@ public class Number extends Actor
         }
        // setImage(filename);
     }    
+    
+    
     //override equals
     public boolean equals(Number n_obj){
         return (n_obj.value==this.value); 
