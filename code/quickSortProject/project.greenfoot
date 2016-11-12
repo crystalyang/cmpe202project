@@ -1,7 +1,11 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
+<<<<<<< HEAD
 >>>>>>>=master
+=======
+>>>>>>>=b721c883de2979b93a5cec875bae7dececedee06
+>>>>>>> master
 class.Button.superclass=greenfoot.Actor
 class.Message.image=msg.png
 class.Message.superclass=greenfoot.Actor
