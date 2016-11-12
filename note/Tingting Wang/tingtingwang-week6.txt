@@ -1,0 +1,15 @@
+
+Top: Eliminate Waste
+After several weeks of collaboration, our team has formed some good measures to
+eliminate waste, especially in time.
+This week, we held our meeting at the same time at the same place, talking individual
+progress of their function and problems met this week, because we started doing with
+some functions. Everyone arrived on time and had a deep thought about their opinion
+before arriving. This is a good way to eliminate time wasting, because there is no need
+making an appointment or thinking what to talk about. Moreover, we have a detailed
+discussion about the logic and pattern of the “Quick-sort” game again, eliminating the
+misunderstanding of the game process.
+What’s more, we are trying to do tasks in parallel as much as possible. And it is
+encouraged to look for help in the group when anyone stuck in a small function or have
+technical problems, because the cross on functions will bring in an unforeseeable
+problem. So this is a wise way to save time in developing projects.
