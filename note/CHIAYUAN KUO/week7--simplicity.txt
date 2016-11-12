@@ -1,0 +1,5 @@
+Name: Chia-Yuan Kuo	
+SID: 010769889	
+Topic: Simplicity
+ 
+Simplicity is the state or quality of being simple. Something which is easy to understand or explain seems simple, in contrast to something complicated.  In the prior several weeks, we keep building the project.  This week, we are still implementing the project step by step in its flow chart.  It is possible to spoil the entire project if someone is unaware of the git status that he is working on.  In order to prevent from that, it is quite simple way to do it based on its flow to complete our work without getting confused of connecting all elements to each other.  We made our implementation simple and worked on  the backend algorithm of calculating every item in each step.  In view of the simplicity among our team, I believe our team could work very well toward our project.
