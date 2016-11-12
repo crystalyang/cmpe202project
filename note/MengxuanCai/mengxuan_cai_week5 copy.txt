@@ -1,0 +1,6 @@
+Mengxuan Cai
+Sid:011494444
+Week 5
+Topic: Eliminate waste
+Eliminating the waste became more important due to the mid-terms. During last meeting, we tried to keep our meeting simple and short, and all of our team members agreed with it, since most of us had to take midterms. But making meeting simple and short doesn’t mean that making our meeting less explicit and effective. On the contrary, by eliminating irrelevant things during the meeting, we not only saved much time, but made the process of our project even more fast. 
+As for the last meeting, based on the conceptual design model and main function about the program,  we decided that it was the time to go further. Since we already have Number, Position, and QuickSort objects, and a few functions, the next step we decided to add more functions and make ui more fancy. After that, we need to deploy our game to Docker. The above content were exactly what we discussed meeting, and except that, we spent little time on preparing the meeting which made us eliminate waste, our meeting more efficient and our goal more clear.
