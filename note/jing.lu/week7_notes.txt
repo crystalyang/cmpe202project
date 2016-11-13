@@ -1,0 +1,5 @@
+Name: Jing Lu
+SID: 010827271 Topic: Eliminate Waste
+This week we entered the final phase for our first part of the project, so the main value I see for this week is eliminating waste of the codes.
+All the functions are in the final process and all team members wrote these codes separately which means that there could be a lot of redundant codes. On the regular meeting this Thursday in the library, we all sync on the functions we have finished and need to be done in the near future. We also discusses on the improvement we could do including removing redundant codes and re-use already existing functions and codes, which is code refactoring.
+We also discussed about the design patterns we could think of for our project. However, it seems to be harder than just doing the project itself. We decided to do it later after we finish the lab and quiz because we hope that we could have a better idea of the implementation.
