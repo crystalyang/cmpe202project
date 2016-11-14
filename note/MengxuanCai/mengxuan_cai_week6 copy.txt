@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww11940\viewh7800\viewkind0
+\hyphauto1\hyphfactor90
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Mengxuan Cai\
+Sid:011494444\
+Top: Feedback\
+\
+Since more and more function and functionalities involved, so the feedbacks of the\
+\
+functions and functionalities from team members become essentially important.\
+\
+Recently, although we may not have time to hold meeting everyday, we discussed our\
+\
+project online everyday. After created a class or a function, we immediately committed\
+\
+and pushed to github. In this way, our team members could give us feedback as soon\
+\
+as possible, and we could learn what to do next through these feedback. Feedback\
+\
+somehow accelerated the development of our game. Besides, JingLu and I also\
+\
+worked on UI last week, so we need all the opinions of our team members on UI. If we\
+\
+could get feedback immediately, we couldn\'92t go further out game UI design. Fortunately,\
+\
+although other team members were very busy, they still offered our projects enough\
+\
+time including effective UI parts\'92 feedbacks which speed up the process of our project\
+\
+and help us communicating on our game with each other more efficiently.}

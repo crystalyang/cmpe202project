@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class QuickSortWorld extends World
 {
-
+    protected boolean started = false;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,6 +19,7 @@ public class QuickSortWorld extends World
         super(1000, 900, 1); 
         this.prepare();
     }
+    
     private void prepare(){
         //QuickSort quickSort = new QuickSort();
         //addObject(quickSort, 367, 237);
@@ -28,6 +29,7 @@ public class QuickSortWorld extends World
         Start start=new Start();
         addObject(start,400,500);
         addObject(new Reset(),600,500);
+        Controller controller = new Controller();
         
         
     }

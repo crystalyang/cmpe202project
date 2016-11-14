@@ -7,5 +7,5 @@ comment1.text=\n\ Act\ -\ do\ whatever\ the\ Start\ wants\ to\ do.\ This\ method
 comment2.params=
 comment2.target=void\ clicked()
 comment3.params=index\ i\ world
-comment3.target=void\ setPos(int,\ int,\ greenfoot.World)
+comment3.target=void\ setNums(int,\ int,\ greenfoot.World)
 numComments=4

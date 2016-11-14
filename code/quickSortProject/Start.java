@@ -19,53 +19,46 @@ public class Start extends Button
         clicked();
     }
     
-    // public void clicked(){
-    
-     // if(Greenfoot.mouseClicked(this)) {
-            // List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
-            // qs.get(0).addedToWorldNextLine();
-        // }
-    // }
-    
      public void clicked(){
      if(Greenfoot.mouseClicked(this)) {
              QuickSortWorld world=(QuickSortWorld)getWorld();
-            
-             
             //List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             //qs.get(0).addedToWorldNextLine();
-            int index=0;
-            for(int j=0;j<8;j++){
-            setPos(index++, j+1, world);
+            if(world.started == false){
+                //int index=0;
+                //for(int j=0;j<8;j++){
+                    //setPos(index++, j+1, world);
+                //}
+                QuickSort quickSort = new QuickSort();
+                world.addObject(quickSort, 367, 237);
+                quickSort.addedToWorld();
+                world.started = true;
+            }
         }
-        
-         QuickSort quickSort = new QuickSort();
-             world.addObject(quickSort, 367, 237);
-             quickSort.addedToWorld();
-        
-        
-        }
-    
     }
     
-    
+    // clean up later
     // public void addedToWorldNextLine(){
         // QuickSortWorld world=(QuickSortWorld)getWorld();
         // int index=0;
         // for(int j=0;j<8;j++){
             // setPos(index++, j+1, world);
         // }
-    
-    
     // }
    
     
-    public void setPos(int index, int i, World world) {
-            Position pos = new Position(index);
-            pos.setImage(pos.getFile());
-            GreenfootImage posImg = pos.getImage();
-            posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
-            world.addObject(pos, 110 * i, 250);
-    }
+    //public void setPos(int index, int i, World world) {
+           // Position pos = new Position(index);
+            //pos.setImage(pos.getFile());
+           // GreenfootImage posImg = pos.getImage();
+           // posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
+            //world.addObject(pos, 110 * i, 250);
+   // }
     
+    
+    
+    public void setNums(int index, int i, World world){
+        
+    }
+        
 }
