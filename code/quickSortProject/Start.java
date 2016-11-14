@@ -31,13 +31,16 @@ public class Start extends Button
              QuickSortWorld world=(QuickSortWorld)getWorld();
             //List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             //qs.get(0).addedToWorldNextLine();
-            int index=0;
-            for(int j=0;j<8;j++){
-            setPos(index++, j+1, world);
-        }
-            QuickSort quickSort = new QuickSort();
-            world.addObject(quickSort, 367, 237);
-            quickSort.addedToWorld();
+            if(world.started == false){
+                int index=0;
+                for(int j=0;j<8;j++){
+                setPos(index++, j+1, world);
+                }
+                QuickSort quickSort = new QuickSort();
+                world.addObject(quickSort, 367, 237);
+                quickSort.addedToWorld();
+                world.started = true;
+            }
         }
     }
     
