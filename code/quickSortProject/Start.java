@@ -33,6 +33,21 @@ public class Start extends Button
                 world.addObject(quickSort, 367, 237);
                 quickSort.addedToWorld();
                 world.started = true;
+                
+                Pivot p = new Pivot();
+                p.setImage("pivot.png");
+                p.getImage().scale(100,130);
+                world.addObject(p,860,320);
+                Marker_i m_i = new Marker_i();
+                m_i.setImage("i.png");
+                m_i.getImage().scale(60,120);
+                world.addObject(m_i,100,100);
+                Marker_j m_j = new Marker_j();
+                m_j.setImage("j.png");
+                m_j.getImage().scale(60,120);
+                world.addObject(m_j,230,100);
+                Message msg = new Message();
+                world.addObject(msg, 500, 400);
             }
         }
     }

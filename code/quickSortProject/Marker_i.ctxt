@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Marker_i
+comment0.text=\n\ Write\ a\ description\ of\ class\ Marker_i\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Marker_i\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=2

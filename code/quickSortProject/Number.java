@@ -36,17 +36,7 @@ public class Number extends Actor
        // setImage(filename);
     }    
     
-    private boolean mouseOnObject(Actor obj)
-    {
-        MouseInfo mi = Greenfoot.getMouseInfo();
-        int actorX = obj.getX(), actorY = obj.getY();
-        int actorWide = obj.getImage().getWidth(), actorHigh = obj.getImage().getHeight();
-        boolean check1 = mi.getX() >= actorX - actorWide / 2;
-        boolean check2 = mi.getY() >= actorY - actorHigh / 2;
-        boolean check3 = mi.getX() <= actorX + actorWide / 2;
-        boolean check4 = mi.getY() <= actorY + actorHigh / 2;
-        return check1 && check2 && check3 && check4;
-    }
+    
     
     //override equals
     public boolean equals(Number n_obj){

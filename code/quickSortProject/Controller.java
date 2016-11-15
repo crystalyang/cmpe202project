@@ -12,11 +12,17 @@ public class Controller extends Actor
      * Act - do whatever the Controller wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int test;
+    public Controller(){
+        test=2;
+    }
+    
     public void act() 
     {
+        System.out.println("ffffff");
         // Add your action code here.
         Number n_pivot= new Number(0);
-        World world=getWorld();
+        QuickSortWorld world=(QuickSortWorld)getWorld();
         List<Number> num = world.getObjects(Number.class);
         for(Number n:num){
             if(Greenfoot.mouseClicked(n)){
@@ -30,5 +36,28 @@ public class Controller extends Actor
             }
         }
         n_pivot.setLocation(110*(mark+1), 260);
-    }    
+    } 
+    
+    public boolean mouseOnObject(Actor obj)
+    {
+        MouseInfo mi = Greenfoot.getMouseInfo();
+        int actorX = obj.getX(), actorY = obj.getY();
+        int actorWide = obj.getImage().getWidth(), actorHigh = obj.getImage().getHeight();
+        boolean check1 = mi.getX() >= actorX - actorWide / 2;
+        boolean check2 = mi.getY() >= actorY - actorHigh / 2;
+        boolean check3 = mi.getX() <= actorX + actorWide / 2;
+        boolean check4 = mi.getY() <= actorY + actorHigh / 2;
+        return check1 && check2 && check3 && check4;
+    }
+    
+    public void swapNumber(Number i, Number j){
+    
+    }
+    
+    //check whether two numbers are allowed to be swaped with current pivot
+    public boolean checkSwap(Number i, Number j){
+        boolean check_i = false;
+        return check_i;
+    }
+    
 }
