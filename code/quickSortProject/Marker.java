@@ -15,5 +15,12 @@ public class Marker extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+    }   
+    
+    //move the object to a number 
+    public void move(Number i){
+        int y = this.getY();
+        int i_x = i.getX();
+        this.setLocation(i_x, y);
+    }
 }

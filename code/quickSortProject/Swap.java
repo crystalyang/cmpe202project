@@ -15,5 +15,15 @@ public class Swap extends Button
     public void act() 
     {
         // Add your action code here.
-    }    
+    }   
+    
+    public void swapNumber(Number i, Number j){
+        int i_x, i_y, j_x, j_y;
+        i_x = i.getX();
+        i_y = i.getY();
+        j_x = j.getX();
+        j_y = j.getY();
+        i.setLocation(j_x,j_y);
+        j.setLocation(i_x,i_y);
+    }
 }

@@ -19,7 +19,6 @@ public class Controller extends Actor
     
     public void act() 
     {
-        System.out.println("ffffff");
         // Add your action code here.
         Number n_pivot= new Number(0);
         QuickSortWorld world=(QuickSortWorld)getWorld();
@@ -50,9 +49,6 @@ public class Controller extends Actor
         return check1 && check2 && check3 && check4;
     }
     
-    public void swapNumber(Number i, Number j){
-    
-    }
     
     //check whether two numbers are allowed to be swaped with current pivot
     public boolean checkSwap(Number i, Number j){
