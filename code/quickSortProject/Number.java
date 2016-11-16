@@ -11,9 +11,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Number extends Actor
 {
     int value;
+    boolean clicked;
     
     Number(int value) {
         this.value = value;
+        this.clicked=false;
     }
     
     public String getFile(){
@@ -25,11 +27,17 @@ public class Number extends Actor
         
     }    
     
-    
-    
     //override equals
     public boolean equals(Number n_obj){
         return (n_obj.value==this.value); 
     }
     
+    
+    //when the number is clicked, renew the clicked attribute, Aim to choose i, choose j
+    public void checkClicked(){
+    
+   if(Greenfoot.mouseClicked(this)) {
+       clicked=true; 
+       }
+    }
 }
