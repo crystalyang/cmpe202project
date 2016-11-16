@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Swap
+comment0.text=\n\ Write\ a\ description\ of\ class\ Swap\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Swap\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment2.params=i\ j
+comment2.target=void\ swapNumber(Number,\ Number)
+comment3.params=
+comment3.target=void\ clicked()
+numComments=4

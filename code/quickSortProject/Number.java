@@ -11,11 +11,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Number extends Actor
 {
     int value;
-    // x, y indicate the position to which Number is dragged
-    int x, y;
-    //GreenfootImage image = this.getImage();
-    //image.scale(70, 70);
-    
     
     Number(int value) {
         this.value = value;
@@ -27,26 +22,10 @@ public class Number extends Actor
     
     public void act() 
     {
-        if(Greenfoot.mouseDragged(this)) {
-            MouseInfo mouse = Greenfoot.getMouseInfo();
-            int mouseX = mouse.getX();
-            int mouseY = mouse.getY();
-            this.setLocation(mouseX, mouseY);
-        }
-       // setImage(filename);
+        
     }    
     
-    private boolean mouseOnObject(Actor obj)
-    {
-        MouseInfo mi = Greenfoot.getMouseInfo();
-        int actorX = obj.getX(), actorY = obj.getY();
-        int actorWide = obj.getImage().getWidth(), actorHigh = obj.getImage().getHeight();
-        boolean check1 = mi.getX() >= actorX - actorWide / 2;
-        boolean check2 = mi.getY() >= actorY - actorHigh / 2;
-        boolean check3 = mi.getX() <= actorX + actorWide / 2;
-        boolean check4 = mi.getY() <= actorY + actorHigh / 2;
-        return check1 && check2 && check3 && check4;
-    }
+    
     
     //override equals
     public boolean equals(Number n_obj){

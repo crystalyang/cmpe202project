@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Message
 comment0.text=\n\ Message\ info\ class\ \n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Message()
+comment1.params=m
+comment1.target=Message(java.lang.String)
 comment2.params=m
 comment2.target=void\ setContent(java.lang.String)
 comment3.params=

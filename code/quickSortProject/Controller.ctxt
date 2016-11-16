@@ -2,6 +2,11 @@
 comment0.target=Controller
 comment0.text=\n\ Write\ a\ description\ of\ class\ Controller\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Controller\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-numComments=2
+comment1.target=Controller()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=obj
+comment3.target=boolean\ mouseOnObject(greenfoot.Actor)
+comment4.params=i\ j
+comment4.target=boolean\ checkSwap(Number,\ Number)
+numComments=5

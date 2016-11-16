@@ -12,9 +12,18 @@ public class Controller extends Actor
      * Act - do whatever the Controller wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+<<<<<<< HEAD
+    
+    int x;
+    public Controller(){
+    
+        x=1;
+    
+=======
     int test;
     public Controller(){
         test=2;
+>>>>>>> cc179754adc06ef46d2d2af782d5a9771215c27f
     }
     
     public void act() 
