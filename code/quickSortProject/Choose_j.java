@@ -34,11 +34,12 @@ public class Choose_j extends Button
         }
         
         //check value for i
-        //List<Choose_i> ci = world.getObjects(Choose_i.class);
-        //int n_i = ci.get(0).number_i.value;
+        List<Marker_j> mj = world.getObjects(Marker_j.class);
+
         if(Greenfoot.mouseClicked(this)){ 
             number_j = number;
             check_j = true;
+            mj.get(0).move(number_j);
             //msg.setContent(number.value + " is chosen for i.");
         }
         return number_j;

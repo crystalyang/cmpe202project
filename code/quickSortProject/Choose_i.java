@@ -33,10 +33,13 @@ public class Choose_i extends Button
                 clicked_value = n.value;
                 number = n; 
             }
-        }// Add your action code here.
+        }
+        List<Marker_i> mi = world.getObjects(Marker_i.class);
+        
         if(Greenfoot.mouseClicked(this)){
             number_i = number;        
             check_i = true;
+            mi.get(0).move(number_i);
             //msg.setContent(number.value + " is chosen for i.");
         }
         return number_i;
