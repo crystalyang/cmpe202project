@@ -30,6 +30,8 @@ public class QuickSortWorld extends World
         addObject(start,400,500);
         addObject(new Reset(),600,500);
         Controller controller = new Controller();
+        addObject(controller,100,200);
+        
         
         
     }
