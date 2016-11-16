@@ -20,21 +20,9 @@ public class Controller extends Actor
     public void act() 
     {
         // Add your action code here.
-        Number n_pivot= new Number(0);
-        QuickSortWorld world=(QuickSortWorld)getWorld();
-        List<Number> num = world.getObjects(Number.class);
-        for(Number n:num){
-            if(Greenfoot.mouseClicked(n)){
-                n_pivot = n;
-            }
-        }// Add your action code here.
-        int mark=0;
-        for(Number n:num){
-            if(n.value<n_pivot.value){
-                mark+=1;
-            }
-        }
-        n_pivot.setLocation(110*(mark+1), 260);
+        
+        
+
     } 
     
     public boolean mouseOnObject(Actor obj)

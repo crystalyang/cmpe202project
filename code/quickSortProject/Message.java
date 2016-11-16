@@ -13,13 +13,19 @@ public class Message extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage img_m;
-    public Message(){
+    
+    public String content;
+    
+    Message(String m){
         img_m = this.getImage();
-        img_m.scale(img_m.getWidth()-35,img_m.getHeight()-100);
+        img_m.drawString(m,50,50);
+        content = m;
     }
     
     public void setContent(String m){
+        img_m = this.getImage();
         img_m.drawString(m,0,10);
+        content = m;
         //other color/font
     }
     public void act() 
