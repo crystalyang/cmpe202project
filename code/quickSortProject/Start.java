@@ -22,7 +22,7 @@ public class Start extends Button
      public void clicked(){
      if(Greenfoot.mouseClicked(this)) {
              QuickSortWorld world=(QuickSortWorld)getWorld();
-            //List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
+            List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             //qs.get(0).addedToWorldNextLine();
             if(world.started == false){
                 //int index=0;
@@ -49,9 +49,12 @@ public class Start extends Button
                 world.addObject(m_j,230,100);
                 
                 Message msg = new Message("Please choose i and j.");
-                msg.setImage("msg.png");
-                msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
+                //msg.setImage("msg.png");
+                //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
                 world.addObject(msg, 500, 400);
+                
+                //List<Message> message=world.getObjectsInRange(1000,Message.class);
+                
                 
             }
         }
