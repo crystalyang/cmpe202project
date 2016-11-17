@@ -36,6 +36,8 @@ public class Swap extends Button
         List<Choose_i> ci = world.getObjects(Choose_i.class);
         List<Choose_j> cj = world.getObjects(Choose_j.class);
         Next_Stage ns = world.getObjects(Next_Stage.class).get(0);
+        List<Message> msgs = world.getObjects(Message.class);
+        Message msg = msgs.get(0);
         /*  //test code
         List<Number> num = world.getObjects(Number.class);
         for(Number n:num){
@@ -53,8 +55,11 @@ public class Swap extends Button
                 swapNumber(i,j);
                 swap_check++;
             }
+            else if(!checkSwap(i,j)){
+                 msg.setContent("You cannot swap those two numbers!\n \nThink it again.");
+            }
             else{
-                //error message
+                msg.setContent("Please click the Next Stage button.");
             }
             
         }

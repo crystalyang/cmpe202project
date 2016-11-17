@@ -17,7 +17,7 @@ public class QuickSortWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 900, 1); 
-        prepare();
+        this.prepare();
     }
     
     private void prepare(){
@@ -49,7 +49,14 @@ public class QuickSortWorld extends World
         ns.setImage("nextstage.png");
         ns.getImage().scale(100,120);
         addObject(ns,850,500);
+        Controller controller = new Controller();
+<<<<<<< HEAD
+        addObject(controller,100,200);
         
+        
+=======
+        addObject(controller,1,1);
+>>>>>>> cc179754adc06ef46d2d2af782d5a9771215c27f
         
     }
     

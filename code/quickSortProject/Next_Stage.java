@@ -16,6 +16,7 @@ public class Next_Stage extends Button
     public boolean stage_control=true;
     public void act() 
     {
+
         QuickSortWorld world=(QuickSortWorld)getWorld();
         if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
             stage_change();
@@ -27,6 +28,8 @@ public class Next_Stage extends Button
         Controller c = world.getObjects(Controller.class).get(0);
         List<Number> number = world.getObjects(Number.class);
         Pivot pivot = world.getObjects(Pivot.class).get(0);
+        List<Message> msgs = world.getObjects(Message.class);
+        Message msg = msgs.get(0);
        //check whether allows user go to the next stage
         if(pass()){
             //ignores the first pivot
@@ -43,13 +46,13 @@ public class Next_Stage extends Button
             else{
             //message to alert user to click next stage
                 stage_control=false;
-                
+                msg.setContent("You are ready for the next stage!");
             }
         }
         else{
             if(Greenfoot.mouseClicked(this)){
                 //error message
-                
+                msg.setContent("You are not ready for the next stage!");
             }
         }
     
@@ -66,4 +69,10 @@ public class Next_Stage extends Button
             return false;
         }
     }
-}
+
+        // Add your action code here.
+}   
+    
+    
+   
+

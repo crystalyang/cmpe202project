@@ -1,0 +1,56 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
+/**
+ * Write a description of class Controller here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Controller extends Actor
+{
+    /**
+     * Act - do whatever the Controller wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+<<<<<<< HEAD
+    
+    int x;
+    public Controller(){
+    
+        x=1;
+    
+=======
+    int test;
+    public Controller(){
+        test=2;
+>>>>>>> cc179754adc06ef46d2d2af782d5a9771215c27f
+    }
+    
+    public void act() 
+    {
+        // Add your action code here.
+        
+        
+
+    } 
+    
+    public boolean mouseOnObject(Actor obj)
+    {
+        MouseInfo mi = Greenfoot.getMouseInfo();
+        int actorX = obj.getX(), actorY = obj.getY();
+        int actorWide = obj.getImage().getWidth(), actorHigh = obj.getImage().getHeight();
+        boolean check1 = mi.getX() >= actorX - actorWide / 2;
+        boolean check2 = mi.getY() >= actorY - actorHigh / 2;
+        boolean check3 = mi.getX() <= actorX + actorWide / 2;
+        boolean check4 = mi.getY() <= actorY + actorHigh / 2;
+        return check1 && check2 && check3 && check4;
+    }
+    
+    
+    //check whether two numbers are allowed to be swaped with current pivot
+    public boolean checkSwap(Number i, Number j){
+        boolean check_i = false;
+        return check_i;
+    }
+    
+}

@@ -48,10 +48,7 @@ public class Controller extends Actor
         }
         //test code end
     } 
-    
-    //check whether two numbers are allowed to be swaped with current pivot
-
-    
+      
     //quickSort
  
    
