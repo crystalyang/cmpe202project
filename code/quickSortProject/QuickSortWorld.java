@@ -53,5 +53,14 @@ public class QuickSortWorld extends World
         
     }
     
+   private GreenfootSound music = new GreenfootSound("music.mp3"); 
+   public void started()  
+   {  
+       music.playLoop();  
+    }  
    
+    public void stopped()  
+    {  
+        music.stop();  
+    } 
 }

@@ -14,15 +14,18 @@ public class Reset extends Button
      */
     public void act() 
     {
-        if(mouseOnObject(this)) {
-            this.setImage("reset_p.png");
-            this.getImage().scale(100,120);
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
+            if(mouseOnObject(this)) {
+                this.setImage("reset_p.png");
+                this.getImage().scale(100,120);
         
+            }
+            else{
+                this.setImage("reset.png");
+                this.getImage().scale(100,120);
+            } 
         }
-        else{
-            this.setImage("reset.png");
-            this.getImage().scale(100,120);
-        } 
         
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new QuickSortWorld());

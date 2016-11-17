@@ -15,15 +15,19 @@ public class Swap extends Button
     public int swap_check=0;
     public void act() 
     {
-        if(mouseOnObject(this)) {
-            this.setImage("swap_p.png");
-            this.getImage().scale(100,120);
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
+            if(mouseOnObject(this)) {
+                this.setImage("swap_p.png");
+                this.getImage().scale(100,120);
         
+            }
+            else{
+                this.setImage("swap.png");
+                this.getImage().scale(100,120);
+            }
         }
-        else{
-           this.setImage("swap.png");
-            this.getImage().scale(100,120);
-        }
+        
         if(Greenfoot.mouseClicked(this)){
             clicked();
         }

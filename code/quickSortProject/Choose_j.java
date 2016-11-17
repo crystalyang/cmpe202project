@@ -17,7 +17,10 @@ public class Choose_j extends Button
      */
     public void act() 
     {
-       if(mouseOnObject(this)) {
+       
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
+            if(mouseOnObject(this)) {
             this.setImage("choosej_p.png");
             this.getImage().scale(100,120);
         
@@ -26,10 +29,6 @@ public class Choose_j extends Button
            this.setImage("choosej.png");
             this.getImage().scale(100,120);
         } 
-       
-       QuickSortWorld world=(QuickSortWorld)getWorld();
-        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
-            
             number_j = getN_clicked(); 
         }
          

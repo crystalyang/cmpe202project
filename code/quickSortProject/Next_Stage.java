@@ -17,7 +17,11 @@ public class Next_Stage extends Button
     public boolean before_next=false;
     public void act() 
     {
-        if(mouseOnObject(this)) {
+        
+        
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
+            if(mouseOnObject(this)) {
             this.setImage("nextstage_p.png");
             this.getImage().scale(100,120);
         
@@ -26,8 +30,6 @@ public class Next_Stage extends Button
            this.setImage("nextstage.png");
             this.getImage().scale(100,120);
         }
-        QuickSortWorld world=(QuickSortWorld)getWorld();
-        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
             stage_change();
         }
     }   
