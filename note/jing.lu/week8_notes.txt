@@ -1,0 +1,7 @@
+
+
+Name: Jing Lu	
+SID: 010827271	
+Topic: Communication
+	This week we had a significant change on the design of our project, but the effective communication among our team members mitigated the damage to our team. Basically, we used to have a very complicated design, which is hard to realize. We found this issue for a while, but never got a chance to change it. 
+This Monday, some of our team members discussed the design with me. We had a long conversation which made a new design for the game. Some of the existing classes and function were removed because they would not be useful in the new design. We also discussed the new functions and confusion for the implementation and algorithm. In the end, we were able to deliver the functions, features in a much faster path by the end of this week. Due to the great communication we have, we are able to start the design pattern this week and hopefully we could begin with the cloud deployment early next week so that we would have enough time to perfect our game and also schedule the meeting for the extra points.
