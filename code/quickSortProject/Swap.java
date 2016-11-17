@@ -56,7 +56,7 @@ public class Swap extends Button
                 swap_check++;
             }
             else if(!checkSwap(i,j)){
-                 msg.setContent("You cannot swap those two numbers!\n \nThink it again.");
+                 msg.setContent("You cannot swap those them!\n \nThink it again.");
             }
             else{
                 msg.setContent("Please click the Next Stage button.");

@@ -26,7 +26,8 @@ public class Message extends Actor
        // this.img_m=new GreenfootImage("msg.png");
         //img_m.scale(getImage().getWidth()-35,getImage().getHeight()-100);
         //img_m.set
-        img_m.drawString(m,50,100);
+        img_m.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 18));
+        img_m.drawString(m,30,100);
         
         setImage(img_m);
         //img_m.setColor(Color.BLACK);
@@ -41,7 +42,8 @@ public class Message extends Actor
         img_m = this.getImage();
         img_m.clear();
         this.setImage("msg.png");
-        this.getImage().drawString(m,50,100);
+        this.getImage().setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 18));
+        this.getImage().drawString(m,30,100);
         content = m;
         //other color/font
     }
