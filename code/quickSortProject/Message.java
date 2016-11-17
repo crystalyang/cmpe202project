@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
 /**
  * Message info class 
  * 
@@ -26,10 +27,13 @@ public class Message extends Actor
        // this.img_m=new GreenfootImage("msg.png");
         //img_m.scale(getImage().getWidth()-35,getImage().getHeight()-100);
         //img_m.set
-        img_m.setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 18));
+        img_m.setFont(new java.awt.Font("AppleGothic", java.awt.Font.PLAIN, 16));
         img_m.drawString(m,30,100);
-        
         setImage(img_m);
+        String[] font=GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+        for(String n:font){
+            //System.out.print(n+"~");
+        }
         //img_m.setColor(Color.BLACK);
         //img_m.drawString(m,500,50);
         //getImage().scale(getImage().getWidth()-35,getImage().getHeight()-100);
@@ -42,7 +46,8 @@ public class Message extends Actor
         img_m = this.getImage();
         img_m.clear();
         this.setImage("msg.png");
-        this.getImage().setFont(new java.awt.Font("Helvetica", java.awt.Font.PLAIN, 18));
+        
+        this.getImage().setFont(new Font("AppleGothic", Font.PLAIN, 16));
         this.getImage().drawString(m,30,100);
         content = m;
         //other color/font

@@ -15,7 +15,15 @@ public class Swap extends Button
     public int swap_check=0;
     public void act() 
     {
-        // Add your action code here.
+        if(mouseOnObject(this)) {
+            this.setImage("swap_p.png");
+            this.getImage().scale(100,120);
+        
+        }
+        else{
+           this.setImage("swap.png");
+            this.getImage().scale(100,120);
+        }
         if(Greenfoot.mouseClicked(this)){
             clicked();
         }
@@ -54,9 +62,16 @@ public class Swap extends Button
             if(checkSwap(i,j) && ns.stage_control){
                 swapNumber(i,j);
                 swap_check++;
+                ns.stage_change();
+                if(ns.before_next){
+                    msg.setContent("Swap the duck number with \n the number after i.");
+                }
+                else{
+                    msg.setContent("  Great Job! \n  Go on with another i and j now.");
+                }
             }
             else if(!checkSwap(i,j)){
-                 msg.setContent("You cannot swap those them!\n \nThink it again.");
+                 msg.setContent("You cannot swap those them!\n \n     Try different numbers.");
             }
             else{
                 msg.setContent("Please click the Next Stage button.");

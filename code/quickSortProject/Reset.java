@@ -14,7 +14,17 @@ public class Reset extends Button
      */
     public void act() 
     {
-         if(Greenfoot.mouseClicked(this)) {
+        if(mouseOnObject(this)) {
+            this.setImage("reset_p.png");
+            this.getImage().scale(100,120);
+        
+        }
+        else{
+            this.setImage("reset.png");
+            this.getImage().scale(100,120);
+        } 
+        
+        if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new QuickSortWorld());
              
         }// Add your action code here.

@@ -17,6 +17,16 @@ public class Start extends Button
     {
         // Add your action code here.
         clicked();
+        if(mouseOnObject(this)) {
+            this.setImage("start_p.png");
+            this.getImage().scale(100,120);
+        
+        }
+        else{
+           this.setImage("start.png");
+            this.getImage().scale(100,120);
+        }
+        
     }
     
      public void clicked(){
@@ -48,7 +58,7 @@ public class Start extends Button
                 m_j.getImage().scale(50,100);
                 world.addObject(m_j,100,100);
                 
-                Message msg = new Message("Please choose i and j.");
+                Message msg = new Message("Choose number for i and j. j is\nsmaller than duck. i is reverse.\nTry to find the rule. Good Luck!");
                 //msg.setImage("msg.png");
                 //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
                 world.addObject(msg, 500, 700);
