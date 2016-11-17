@@ -13,6 +13,7 @@ public class Swap extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public int swap_check=0;
+    public int error=0;
     public void act() 
     {
         QuickSortWorld world=(QuickSortWorld)getWorld();
@@ -75,7 +76,14 @@ public class Swap extends Button
                 }
             }
             else if(!checkSwap(i,j)){
-                 msg.setContent("You cannot swap those them!\n \n     Try different numbers.");
+                error = error+1;
+                if(error<5){
+                    msg.setContent("You cannot swap those them!\n      Try different numbers.");
+                }
+                else{
+                    msg.setContent("You tried five wrong swaps! \n Game End.");
+                    Greenfoot.stop();
+                }
             }
             else{
                 msg.setContent("Please click the Next Stage button.");

@@ -18,17 +18,17 @@ public class Start extends Button
         // Add your action code here.
         clicked();
         //QuickSortWorld world=(QuickSortWorld)getWorld();
-       // if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
-            if(mouseOnObject(this)) {
-                this.setImage("start_p.png");
-                this.getImage().scale(100,120);
+      
+        if(mouseOnObject(this)) {
+            this.setImage("start_p.png");
+            this.getImage().scale(100,120);
         
-            }
-            else{
-                this.setImage("start.png");
-                this.getImage().scale(100,120);
-            }
-       // }
+        }
+        else{
+            this.setImage("start.png");
+            this.getImage().scale(100,120);
+        }
+        
         
     }
     

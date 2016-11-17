@@ -23,15 +23,20 @@ public class Button extends Actor
     }
     
     public boolean mouseOnObject(Actor obj)
-    {
+    { 
         MouseInfo mi = Greenfoot.getMouseInfo();
-        int actorX = obj.getX(), actorY = obj.getY();
-        int actorWide = obj.getImage().getWidth(), actorHigh = obj.getImage().getHeight();
-        boolean check1 = mi.getX() >= actorX - actorWide / 2;
-        boolean check2 = mi.getY() >= actorY - actorHigh / 2;
-        boolean check3 = mi.getX() <= actorX + actorWide / 2;
-        boolean check4 = mi.getY() <= actorY + actorHigh / 2;
-        return check1 && check2 && check3 && check4;
+        if(mi!= null){
+            int actorX = obj.getX(), actorY = obj.getY();
+            int actorWide = obj.getImage().getWidth(), actorHigh = obj.getImage().getHeight();
+            boolean check1 = mi.getX() >= actorX - actorWide / 2;
+            boolean check2 = mi.getY() >= actorY - actorHigh / 2;
+            boolean check3 = mi.getX() <= actorX + actorWide / 2;
+            boolean check4 = mi.getY() <= actorY + actorHigh / 2;
+            return check1 && check2 && check3 && check4;
+        }
+        else{
+            return false;
+        }
     }
  
 }
