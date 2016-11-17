@@ -42,17 +42,18 @@ public class Start extends Button
                 Marker_i m_i = new Marker_i();
                 m_i.setImage("i.png");
                 m_i.getImage().scale(50,100);
-                world.addObject(m_i,100,100);
+                world.addObject(m_i,15,100);
                 Marker_j m_j = new Marker_j();
                 m_j.setImage("j.png");
                 m_j.getImage().scale(50,100);
-                world.addObject(m_j,230,100);
+                world.addObject(m_j,100,100);
                 
                 Message msg = new Message("Please choose i and j.");
                 msg.setImage("msg.png");
                 msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
                 world.addObject(msg, 500, 400);
-                
+                Controller controller = new Controller();
+                world.addObject(controller,1,1);
             }
         }
     }

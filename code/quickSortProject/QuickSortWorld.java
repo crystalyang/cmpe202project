@@ -49,8 +49,7 @@ public class QuickSortWorld extends World
         ns.setImage("nextstage.png");
         ns.getImage().scale(100,120);
         addObject(ns,850,500);
-        Controller controller = new Controller();
-        addObject(controller,1,1);
+        
         
     }
     

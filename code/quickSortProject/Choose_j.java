@@ -18,15 +18,20 @@ public class Choose_j extends Button
     public void act() 
     {
         
-       number_j = getN_clicked(); 
        
-       // List<Message> msgs = world.getObjects(Message.class);
-       // Message msg = msgs.get(0);  
+       QuickSortWorld world=(QuickSortWorld)getWorld();
+        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
+            
+            number_j = getN_clicked(); 
+        }
+         
     }    
     
     public Number getN_clicked(){
         QuickSortWorld world=(QuickSortWorld)getWorld();
         List<Number> num = world.getObjects(Number.class);
+        List<Message> msgs = world.getObjects(Message.class);
+        Message msg = msgs.get(0); 
         for(Number n:num){
             if(Greenfoot.mouseClicked(n)){
                 number = n;
@@ -40,7 +45,8 @@ public class Choose_j extends Button
             number_j = number;
             check_j = true;
             mj.get(0).move(number_j);
-            //msg.setContent(number.value + " is chosen for i.");
+            //message to let user know which j is chosen
+            msg.setContent(number.value + " is chosen for i.");
         }
         return number_j;
     }

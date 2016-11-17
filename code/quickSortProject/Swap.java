@@ -12,6 +12,7 @@ public class Swap extends Button
      * Act - do whatever the Swap wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public int swap_check=0;
     public void act() 
     {
         // Add your action code here.
@@ -34,7 +35,7 @@ public class Swap extends Button
         QuickSortWorld world=(QuickSortWorld)getWorld();
         List<Choose_i> ci = world.getObjects(Choose_i.class);
         List<Choose_j> cj = world.getObjects(Choose_j.class);
-        
+        Next_Stage ns = world.getObjects(Next_Stage.class).get(0);
         /*  //test code
         List<Number> num = world.getObjects(Number.class);
         for(Number n:num){
@@ -45,8 +46,28 @@ public class Swap extends Button
                 System.out.println(cj.get(0).number_j.value +"value for j get");
             }
         } */
+        Number i = ci.get(0).number_i;
+        Number j = cj.get(0).number_j;
         if(ci.get(0).check_i && cj.get(0).check_j){
-            swapNumber(ci.get(0).number_i,cj.get(0).number_j);
+            if(checkSwap(i,j) && ns.stage_control){
+                swapNumber(i,j);
+                swap_check++;
+            }
+            else{
+                //error message
+            }
+            
         }
+    }
+    
+    public boolean checkSwap(Number i, Number j){
+        boolean check_i = false;
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        List<int[]> result = world.getObjects(Controller.class).get(0).result;
+        int[] arr=result.get(swap_check);
+        if(arr[0]==i.value && arr[1]==j.value){
+            check_i = true;
+        }
+        return check_i;
     }
 }

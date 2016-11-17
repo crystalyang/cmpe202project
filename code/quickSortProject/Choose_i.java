@@ -40,6 +40,7 @@ public class Choose_i extends Button
             number_i = number;        
             check_i = true;
             mi.get(0).move(number_i);
+            //message to let user know which j is chosen
             //msg.setContent(number.value + " is chosen for i.");
         }
         return number_i;

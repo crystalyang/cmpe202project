@@ -16,7 +16,7 @@ public class Message extends Actor
     
     public String content;
     
-    Message(String m){
+    public Message(String m){
         img_m = this.getImage();
         img_m.drawString(m,50,50);
         content = m;

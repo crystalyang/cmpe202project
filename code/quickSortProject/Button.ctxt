@@ -6,4 +6,6 @@ comment1.target=void\ act()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Button\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=Button()
-numComments=3
+comment3.params=obj
+comment3.target=boolean\ mouseOnObject(greenfoot.Actor)
+numComments=4

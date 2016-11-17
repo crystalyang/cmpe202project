@@ -15,16 +15,14 @@ import java.util.*;// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class QuickSort extends Actor
 {
-    /**
-     * Act - do whatever the QuickSort wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    int pivot;
+
     int start;
     int end;
 
     //Message m = new Message();
     Number[] numbers= new Number[8];
+    public int[] array = new int[8];
+    
     public QuickSort(){
         Set<Number> set = new HashSet<>();   
         boolean check_set;
@@ -47,6 +45,9 @@ public class QuickSort extends Actor
         }
         numbers = set.toArray(new Number[8]);
        // addedToWorld();
+       for(int i=0;i<8;i++){
+           array[i]=numbers[i].value;
+        } 
     }
     
     
@@ -75,44 +76,7 @@ public class QuickSort extends Actor
         }
     }
     
-    //Position class
-    // public void addedToWorldNextLine(){
-        // QuickSortWorld world=(QuickSortWorld)getWorld();
-        // int index=0;
-        // for(int j=0;j<8;j++){
-            // setPos(index++, j+1, world);
-        // }
-    
-    
-    // }
-    
-    
-    
-    
-    
-    /* public void setPos(int index, int i, World world) {
-            Position pos = new Position(index);
-            pos.setImage(pos.getFile());
-            GreenfootImage posImg = pos.getImage();
-            posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
-            world.addObject(pos, 110 * i, 250);
-    }*/
-    //public Position getPosition() {
  
-    //}
-    //pick pivot in array
-    //public int pickPivot(){
-        
-    //}    
-    //move pivot to the position
-    //public int movePivot() {
-    //}
-    //check if the number fits the position
-    //public boolean check() {
-    //}
-    //check if it is the right time to end
-    //public boolean caculate(int start, int end) {
-    //}
     //check error times
    // public int errorCount() {
     //}
