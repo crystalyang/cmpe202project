@@ -15,6 +15,7 @@ public class Controller extends Actor
     private boolean control=true;
     List<int[]> result = new ArrayList<int[]>();
     List<Integer> pivots = new ArrayList<Integer>();
+    List<Integer> nodes = new ArrayList<Integer>();
     List<Integer> stage_alert = new ArrayList<Integer>();
     public int stage=0;
     public Controller(){
@@ -82,6 +83,7 @@ public class Controller extends Actor
         }
         int left = start-1;
         int right = start;
+        nodes.add(A[start]);
         int pivot = A[end];
         pivots.add(pivot);
         for(right=start;right<end;right++){
