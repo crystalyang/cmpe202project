@@ -50,6 +50,7 @@ public class Swap extends Button
         List<Choose_j> cj = world.getObjects(Choose_j.class);
         Next_Stage ns = world.getObjects(Next_Stage.class).get(0);
         List<Message> msgs = world.getObjects(Message.class);
+        List<Chance> cl = world.getObjects(Start.class).get(0).chance_list;
         Message msg = msgs.get(0);
         /*  //test code
         List<Number> num = world.getObjects(Number.class);
@@ -78,9 +79,11 @@ public class Swap extends Button
             else if(!checkSwap(i,j)){
                 error = error+1;
                 if(error<5){
-                    msg.setContent("You cannot swap those them!\n      Try different numbers.");
+                    msg.setContent("  You cannot swap those them!\n      Try different numbers.\n   You have another "+(5-error)+" chances.");
+                    cl.get(error-1).getImage().setTransparency(0);
                 }
                 else{
+                    cl.get(4).getImage().setTransparency(0);
                     msg.setContent("You tried five wrong swaps! \n Game End.");
                     Greenfoot.stop();
                 }

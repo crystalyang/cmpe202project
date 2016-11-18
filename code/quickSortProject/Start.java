@@ -13,6 +13,7 @@ public class Start extends Button
      * Act - do whatever the Start wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    List<Chance> chance_list= new ArrayList<Chance>();
     public void act() 
     {
         // Add your action code here.
@@ -49,7 +50,7 @@ public class Start extends Button
                 world.started = true;
              
                 Pivot p = new Pivot();
-                p.setImage("pivot.png");
+                p.setImage("pivot2.png");
                 p.getImage().scale(80,110);
                 world.addObject(p,860,320);
                 Marker_i m_i = new Marker_i();
@@ -61,10 +62,36 @@ public class Start extends Button
                 m_j.getImage().scale(50,100);
                 world.addObject(m_j,100,100);
                 
-                Message msg = new Message("Choose number for i and j. j is\nsmaller than duck. i is reverse.\nTry to find the rule. Good Luck!");
+                Chance chance1 = new Chance();
+                chance1.setImage("chance.png");
+                chance1.getImage().scale(30,30);
+                world.addObject(chance1,380,550);
+                chance_list.add(chance1);
+                Chance chance2 = new Chance();
+                chance2.setImage("chance.png");
+                chance2.getImage().scale(30,30);
+                world.addObject(chance2,440,550);
+                chance_list.add(chance2);
+                Chance chance3 = new Chance();
+                chance3.setImage("chance.png");
+                chance3.getImage().scale(30,30);
+                world.addObject(chance3,500,550);
+                chance_list.add(chance3);
+                Chance chance4 = new Chance();
+                chance4.setImage("chance.png");
+                chance4.getImage().scale(30,30);
+                world.addObject(chance4,560,550);
+                chance_list.add(chance4);
+                Chance chance5 = new Chance();
+                chance5.setImage("chance.png");
+                chance5.getImage().scale(30,30);
+                world.addObject(chance5,620,550);
+                chance_list.add(chance5);
+                
+                Message msg = new Message("Choose a number: click number then click  \n\"Select i\" or \"Select i\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
                 //msg.setImage("msg.png");
                 //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
-                world.addObject(msg, 500, 600);
+                world.addObject(msg, 500, 680);
 
                 Controller controller = new Controller();
                 world.addObject(controller,1,1);
