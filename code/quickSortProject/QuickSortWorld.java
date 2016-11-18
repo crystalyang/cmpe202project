@@ -16,7 +16,7 @@ public class QuickSortWorld extends World
     public QuickSortWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 900, 1); 
+        super(1000, 1000, 1); 
         prepare();
     }
     
@@ -28,27 +28,27 @@ public class QuickSortWorld extends World
         Start start=new Start();
         start.setImage("start.png");
         start.getImage().scale(100,120);
-        addObject(start,100,500);
+        addObject(start,100,450);
         Reset reset = new Reset();
         reset.setImage("reset.png");
         reset.getImage().scale(100,120);
-        addObject(reset,250,500);
+        addObject(reset,250,450);
         Choose_i c_i = new Choose_i();
         c_i.setImage("choosei.png");
         c_i.getImage().scale(100,120);
-        addObject(c_i,400,500);
+        addObject(c_i,400,450);
         Choose_j c_j = new Choose_j();
         c_j.setImage("choosej.png");
         c_j.getImage().scale(100,120);
-        addObject(c_j,550,500);
+        addObject(c_j,550,450);
         Swap swap = new Swap();
         swap.setImage("swap.png");
         swap.getImage().scale(100,120);
-        addObject(swap,700,500);
+        addObject(swap,700,450);
         Next_Stage ns = new Next_Stage();
         ns.setImage("nextstage.png");
         ns.getImage().scale(100,120);
-        addObject(ns,850,500);
+        addObject(ns,850,450);
         
         
     }

@@ -42,19 +42,24 @@ public class Next_Stage extends Button
         List<Message> msgs = world.getObjects(Message.class);
         Swap s = world.getObjects(Swap.class).get(0);
         Message msg = msgs.get(0);
+        Marker_j mj= world.getObjects(Marker_j.class).get(0);
        //check whether allows user go to the next stage
         if(pass()){
             //ignores the first pivot
             if(Greenfoot.mouseClicked(this)){
                 int piv = c.pivots.get(this.stage+1);
+                int node = c.nodes.get(this.stage+1);
                 for(Number n:number){
                     if(n.value==piv){
                         pivot.move(n);
                     }
+                    if(n.value==node){
+                        mj.move(n);
+                    }
                 }
                 this.stage = this.stage+1;
                 stage_control=true;
-                msg.setContent("Go on with another i and j on \n the left side of the duck now.");
+                msg.setContent("Go on with another i and j. \n Choose between J and pivot now.");
             }
             else{
             //message to alert user to click next stage
