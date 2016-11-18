@@ -28,7 +28,7 @@ public class Message extends Actor
         //img_m.scale(getImage().getWidth()-35,getImage().getHeight()-100);
         //img_m.set
         img_m.setFont(new java.awt.Font("AppleGothic", java.awt.Font.PLAIN, 16));
-        img_m.drawString(m,30,100);
+        img_m.drawString(m,30,80);
         setImage(img_m);
         String[] font=GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
         for(String n:font){
@@ -48,7 +48,7 @@ public class Message extends Actor
         this.setImage("msg.png");
         
         this.getImage().setFont(new Font("AppleGothic", Font.PLAIN, 16));
-        this.getImage().drawString(m,30,100);
+        this.getImage().drawString(m,30,80);
         content = m;
         //other color/font
     }

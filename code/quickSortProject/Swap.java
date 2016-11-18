@@ -69,7 +69,7 @@ public class Swap extends Button
                 swap_check++;
                 ns.stage_change();
                 if(ns.before_next){
-                    msg.setContent("Swap the duck number with \n the number after i.");
+                    msg.setContent("Time to move the pivot. Swap the duck\n number with the number after i.");
                 }
                 else{
                     msg.setContent("  Great Job! \n  Go on with another i and j now.");

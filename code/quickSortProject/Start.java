@@ -64,7 +64,7 @@ public class Start extends Button
                 Message msg = new Message("Choose number for i and j. j is\nsmaller than duck. i is reverse.\nTry to find the rule. Good Luck!");
                 //msg.setImage("msg.png");
                 //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
-                world.addObject(msg, 500, 700);
+                world.addObject(msg, 500, 600);
 
                 Controller controller = new Controller();
                 world.addObject(controller,1,1);
