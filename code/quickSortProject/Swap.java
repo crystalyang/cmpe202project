@@ -84,7 +84,7 @@ public class Swap extends Button
                 }
                 else{
                     cl.get(4).getImage().setTransparency(0);
-                    msg.setContent("You tried five wrong swaps! \n Game End.");
+                    msg.setContent("You tried five wrong swaps! \n Game End. Please reset and start again.");
                     Greenfoot.stop();
                 }
             }

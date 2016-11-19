@@ -16,13 +16,31 @@ public class Tutorial extends Button
      */
     public void act() 
     {
+        
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
+            if(mouseOnObject(this)) {
+            this.setImage("tutorial_p.png");
+            this.getImage().scale(100,120);
+            }
+        
+            else{
+                this.setImage("tutorial.png");
+                this.getImage().scale(100,120);
+            }
+        }
+      
+        
+        
         if(Greenfoot.mouseClicked(this)){
         
         String link = "https://youtu.be/LBiajXU_fAU";
         
         if(Desktop.isDesktopSupported()){
             try{
+                Greenfoot.stop();
                 Desktop.getDesktop().browse(new URI(link));
+                
             }catch (Exception e){
                 e.printStackTrace();
             }
