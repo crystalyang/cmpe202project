@@ -1,0 +1,5 @@
+Name: Mengxuan Cai
+SID: 011494444	
+Topic: Eliminate waste
+We had an emergency meeting that we decided to redesign the game, since it it is not easy to implement in the previous way. However, at this time, due date is coming, It was hard to redesign the game because we’ve already done much work. After compared pros and cons between the previous way and efficient way, we decided to eliminate the waste and work on a more efficient way right away.
+Although too much we’ve already done, but it was not the trend that we expect, if we continued the old one, we would got trouble before the due date. And all of our team members agreed with the new structure which made our process smoothly and they all agreed that the waste had to be eliminated, since it would not work at the end, why not change the way to implement our game? So we started all over again, and were very hard-working on our project these days. Besides that,  eliminating this waste also helps us save much time to do the design pattern parts and the extra part.
