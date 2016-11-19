@@ -32,23 +32,27 @@ public class QuickSortWorld extends World
         Reset reset = new Reset();
         reset.setImage("reset.png");
         reset.getImage().scale(100,120);
-        addObject(reset,250,450);
+        addObject(reset,230,450);
         Choose_i c_i = new Choose_i();
         c_i.setImage("choosei.png");
         c_i.getImage().scale(100,120);
-        addObject(c_i,400,450);
+        addObject(c_i,360,450);
         Choose_j c_j = new Choose_j();
         c_j.setImage("choosej.png");
         c_j.getImage().scale(100,120);
-        addObject(c_j,550,450);
+        addObject(c_j,490,450);
         Swap swap = new Swap();
         swap.setImage("swap.png");
         swap.getImage().scale(100,120);
-        addObject(swap,700,450);
+        addObject(swap,620,450);
         Next_Stage ns = new Next_Stage();
         ns.setImage("nextstage.png");
         ns.getImage().scale(100,120);
-        addObject(ns,850,450);
+        addObject(ns,750,450);
+        Tutorial t = new Tutorial();
+        t.setImage("tutorial.png");
+        t.getImage().scale(100,120);
+        addObject(t,880,450);
         
         
     }
