@@ -1,7 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=8ee4f6daf37eec64da2a07a73fde8d7c0ff4f9cc
+>>>>>>>=41b1408a6721e9f9e5812bfe28a3c54cfbd2712d
 class.Button.superclass=greenfoot.Actor
 class.Chance.superclass=Marker
 class.Choose_i.image=choosei.png
@@ -220,18 +220,12 @@ dependency9.to=QuickSortWorld
 dependency9.type=UsesDependency
 editor.fx.0.height=700
 editor.fx.0.width=700
-editor.fx.0.x=267
-editor.fx.0.y=60
-editor.swing.0.height=700
-<<<<<<< HEAD
-editor.swing.0.width=701
-editor.swing.0.x=877
-editor.swing.0.y=745
-=======
-editor.swing.0.width=847
-editor.swing.0.x=314
-editor.swing.0.y=138
->>>>>>> 41b1408a6721e9f9e5812bfe28a3c54cfbd2712d
+editor.fx.0.x=0
+editor.fx.0.y=0
+editor.swing.0.height=0
+editor.swing.0.width=0
+editor.swing.0.x=0
+editor.swing.0.y=23
 editor.swing.1.height=739
 editor.swing.1.width=701
 editor.swing.1.x=2242
@@ -241,19 +235,11 @@ editor.swing.2.width=701
 editor.swing.2.x=2416
 editor.swing.2.y=-78
 mainWindow.height=910
-<<<<<<< HEAD
-mainWindow.width=1259
-mainWindow.x=89
-mainWindow.y=89
-package.numDependencies=60
-package.numTargets=17
-=======
 mainWindow.width=1301
-mainWindow.x=1377
-mainWindow.y=-257
+mainWindow.x=1259
+mainWindow.y=23
 package.numDependencies=63
 package.numTargets=18
->>>>>>> 41b1408a6721e9f9e5812bfe28a3c54cfbd2712d
 project.charset=UTF-8
 readme.height=58
 readme.name=@README
