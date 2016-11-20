@@ -19,7 +19,6 @@ public class Reset extends Button
             if(mouseOnObject(this)) {
                 this.setImage("reset_p.png");
                 this.getImage().scale(100,120);
-        
             }
             else{
                 this.setImage("reset.png");

@@ -88,7 +88,7 @@ public class Start extends Button
                 world.addObject(chance5,620,550);
                 chance_list.add(chance5);
                 
-                Message msg = new Message("Choose a number: click number then click  \n\"Select i\" or \"Select i\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
+                Message msg = new Message("Choose a number: click number then click  \n\"Select i\" or \"Select j\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
                 //msg.setImage("msg.png");
                 //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
                 world.addObject(msg, 500, 680);
