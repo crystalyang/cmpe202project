@@ -1,0 +1,7 @@
+
+
+Name: Chia-Yuan Kuo	
+SID: 010769889	
+Topic: Simplicity
+ 
+Simplicity is the state or quality of being simple. Something which is easy to understand or explain seems simple, in contrast to something complicated.  In the prior several weeks, we keep building the project.  Last week, we implemented the project step by step in its flow chart because it is possible to spoil the entire project if someone is unaware of the git status that he is working on.  This week, we start to deal with design patterns to be placed in our project.  That is, we refactor our code to make it accommodate the design patterns that we learned from the class.  I consider it a great chance to get familiar with those patterns, and it is really interesting to review the code so as to make it clean and readable.  Of course, since currently we have a workable project, we do not want to crack our project or create bugs in it.  A clear principle for our using the patterns is to keep our modification as simple as possible.  We discuss a lot about choosing the patterns to be placed in the code.  Now, we come up with: the state pattern, the template pattern, and the composite pattern.  There are two more to go.  We hope that even after placing the patterns our project is still clean and simple.
