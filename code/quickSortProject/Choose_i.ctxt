@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=Choose_i
 comment0.text=\n\ Write\ a\ description\ of\ class\ Choose_i\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=void\ act()
+comment1.params=c_i
+comment1.target=void\ initial(Button)
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Choose_i\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
-comment2.target=Number\ get_number_i()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=boolean\ get_check_i()
+comment3.target=Number\ get_number_i()
 comment4.params=
-comment4.target=Number\ getN_clicked()
-numComments=5
+comment4.target=boolean\ get_check_i()
+comment5.params=
+comment5.target=Number\ getN_clicked()
+numComments=6

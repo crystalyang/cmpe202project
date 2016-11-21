@@ -17,8 +17,6 @@ public class Button extends Actor implements Component
         // Add your action code here.
     }
     public void initial(Button bl) {
-        
-    
     }
     public Button(){
         GreenfootImage img = getImage();
