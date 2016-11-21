@@ -12,8 +12,8 @@ public class Swap extends Button
      * Act - do whatever the Swap wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public int swap_check=0;
-    public int error=0;
+    private int swap_check=0;
+    private int error=0;
     public void act() 
     {
         QuickSortWorld world=(QuickSortWorld)getWorld();
@@ -34,6 +34,15 @@ public class Swap extends Button
         }
     }   
     
+    public int get_swap_check(){
+        return swap_check;
+    }
+    
+    public int get_error(){
+        return error;
+    }
+    
+    
     public void swapNumber(Number i, Number j){
         int i_x, i_y, j_x, j_y;
         i_x = i.getX();
@@ -50,7 +59,7 @@ public class Swap extends Button
         List<Choose_j> cj = world.getObjects(Choose_j.class);
         Next_Stage ns = world.getObjects(Next_Stage.class).get(0);
         List<Message> msgs = world.getObjects(Message.class);
-        List<Chance> cl = world.getObjects(Start.class).get(0).chance_list;
+        List<Chance> cl = world.getObjects(Start.class).get(0).get_chance_list();
         Message msg = msgs.get(0);
         /*  //test code
         List<Number> num = world.getObjects(Number.class);
@@ -62,14 +71,14 @@ public class Swap extends Button
                 System.out.println(cj.get(0).number_j.value +"value for j get");
             }
         } */
-        Number i = ci.get(0).number_i;
-        Number j = cj.get(0).number_j;
-        if(ci.get(0).check_i && cj.get(0).check_j){
-            if(checkSwap(i,j) && ns.stage_control){
+        Number i = ci.get(0).get_number_i();
+        Number j = cj.get(0).get_number_j();
+        if(ci.get(0).get_check_i() && cj.get(0).get_check_j()){
+            if(checkSwap(i,j) && ns.get_stage_control()){
                 swapNumber(i,j);
                 swap_check++;
                 ns.stage_change();
-                if(ns.before_next){
+                if(ns.get_before_next()){
                     msg.setContent("Time to move the pivot. Swap the duck\n number with the number after i.");
                 }
                 else{
@@ -100,7 +109,7 @@ public class Swap extends Button
         QuickSortWorld world=(QuickSortWorld)getWorld();
         List<int[]> result = world.getObjects(Controller.class).get(0).result;
         int[] arr=result.get(swap_check);
-        if(arr[0]==i.value && arr[1]==j.value){
+        if(arr[0]==i.getValue() && arr[1]==j.getValue()){
             check_i = true;
         }
         return check_i;

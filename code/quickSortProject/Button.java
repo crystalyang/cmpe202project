@@ -16,12 +16,12 @@ public class Button extends Actor
     {
         // Add your action code here.
     }  
-    
+
     public Button(){
-    GreenfootImage img = getImage();
-    img.scale(70,70);
+        GreenfootImage img = getImage();
+        img.scale(70,70);
     }
-    
+
     public boolean mouseOnObject(Actor obj)
     { 
         MouseInfo mi = Greenfoot.getMouseInfo();
@@ -38,5 +38,5 @@ public class Button extends Actor
             return false;
         }
     }
- 
+
 }

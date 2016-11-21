@@ -13,7 +13,7 @@ public class Start extends Button
      * Act - do whatever the Start wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    List<Chance> chance_list= new ArrayList<Chance>();
+    private List<Chance> chance_list= new ArrayList<Chance>();
     public void act() 
     {
         // Add your action code here.
@@ -32,6 +32,12 @@ public class Start extends Button
         
         
     }
+    
+    public List<Chance> get_chance_list(){
+    
+        return chance_list;
+    }
+    
     
      public void clicked(){
      if(Greenfoot.mouseClicked(this)) {
