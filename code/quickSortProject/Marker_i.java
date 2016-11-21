@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Marker_i extends Marker
+public class Marker_i extends Actor implements Marker
 {
     /**
      * Act - do whatever the Marker_i wants to do. This method is called whenever
@@ -15,5 +15,9 @@ public class Marker_i extends Marker
     public void act() 
     {
         // Add your action code here.
-    }    
+    }  
+    public void move(Number i){
+        Location l = new Location(i);
+        this.setLocation(l.x, l.y);
+    }
 }
