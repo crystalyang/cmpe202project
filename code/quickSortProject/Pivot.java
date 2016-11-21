@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Pivot extends Marker
+public class Pivot extends Actor implements Marker
 {
     /**
      * Act - do whatever the Pivot wants to do. This method is called whenever
@@ -26,12 +26,10 @@ public class Pivot extends Marker
     public int get_p_value( ){
         return p_value;
     }
-    
-    
     public void move(Number i){
-        int y = this.getY();
-        int i_x = i.getX();
-        this.setLocation(i_x, y);
+        Location l = new Location(i);
+        l.y = 320;
+        this.setLocation(l.x, l.y);
         p_value = i.getValue();
     }
 }

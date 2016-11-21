@@ -25,7 +25,6 @@ public class Number extends Actor
     public int getValue(){
         return value;
     }
-    
     public void setValue(int _value){
           value=_value;
    
