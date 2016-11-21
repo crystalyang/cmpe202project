@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FactoryPart
+comment0.text=\n\ Write\ a\ description\ of\ class\ FactoryPart\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=bl
+comment2.target=void\ initial(FactoryPart)
+numComments=3

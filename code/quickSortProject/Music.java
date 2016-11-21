@@ -13,6 +13,12 @@ public class Music extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    //@Override
+    public void initial(Button bl) 
+    {
+        
+    }
+    
     private MusicPlay mp;
     private boolean play;
     public void act() 
