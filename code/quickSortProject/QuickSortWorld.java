@@ -31,10 +31,19 @@ public class QuickSortWorld extends World implements Component
         bls[4] = new Swap();
         bls[5] = new Next_Stage();
         bls[6] = new Tutorial();
+        
+        // Swap swap=(Swap)bls[4];
+        // Next_Stage ns=(Next_Stage)bls[5];
+        
+        // swap.setSuccessor(ns);
+        
         for(int i = 0; i < bls.length;i++){
             bls[i].initial(bls[i]);
             addObject(bls[i],100 + i* 130,450);
         }
+        
+        Music music =new Music();
+        addObject(music,35,40);
         //QuickSort quickSort = new QuickSort();
         //addObject(quickSort, 367, 237);
        // quickSort.addedToWorld();
@@ -71,14 +80,14 @@ public class QuickSortWorld extends World implements Component
         
     }
     
-   private GreenfootSound music = new GreenfootSound("music.mp3"); 
-   public void started()  
-   {  
-       music.playLoop();  
-    }  
+   // private GreenfootSound music = new GreenfootSound("music.mp3"); 
+   // public void started()  
+   // {  
+       // music.playLoop();  
+    // }  
    
-    public void stopped()  
-    {  
-        music.stop();  
-    } 
+    // public void stopped()  
+    // {  
+        // music.stop();  
+    // } 
 }

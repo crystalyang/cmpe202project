@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Next_Stage extends Button
+public class Next_Stage extends Button 
 {
     /**
      * Act - do whatever the Next_Stage wants to do. This method is called whenever
@@ -117,7 +117,14 @@ public class Next_Stage extends Button
         }
     }
 
-        // Add your action code here.
+     
+    
+    public  void handleRequest(String request){
+    } 
+    
+
+        
+    
 }   
     
     

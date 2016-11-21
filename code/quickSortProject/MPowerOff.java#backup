@@ -1,0 +1,25 @@
+/**
+ * Write a description of class MPoweredOn here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class MPoweredOff extends MState
+{
+    public MPoweredOff(MusicManager mm){
+        super(mm);
+    }
+    
+    @Override
+    public void doPowerON(){
+        musicManager.setState(MState.ON);
+    }
+    
+    @Override
+    public void doRest(){
+        musicManager.setState(MState.OFF);
+    }
+    
+    
+    
+}

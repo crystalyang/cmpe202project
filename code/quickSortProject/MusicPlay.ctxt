@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=MusicPlay
+comment0.text=\n\ Write\ a\ description\ of\ class\ MusicPlay\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=musicFile
+comment1.target=MusicPlay(java.lang.String)
+comment2.params=s
+comment2.target=void\ setState(MusicState)
+comment3.params=
+comment3.target=void\ changeState()
+comment4.params=
+comment4.target=greenfoot.GreenfootSound\ getMusicSound()
+numComments=5
