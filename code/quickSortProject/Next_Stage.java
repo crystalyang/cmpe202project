@@ -13,8 +13,14 @@ public class Next_Stage extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int stage;
-    private boolean stage_control=true;
-    private boolean before_next=false;
+
+    public boolean stage_control=true;
+    public boolean before_next=false;
+    public void initial(Button ns){
+        //ButtonLeaf ns = new Next_Stage();
+        ns.setImage("nextstage.png");
+        ns.getImage().scale(100,120);
+    }
     public void act() 
     {
         

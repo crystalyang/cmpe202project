@@ -12,8 +12,13 @@ public class Swap extends Button
      * Act - do whatever the Swap wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int swap_check=0;
-    private int error=0;
+    public int swap_check=0;
+    public int error=0;
+    public void initial(Button swap){
+        //ButtonLeaf swap = new Swap();
+        swap.setImage("swap.png");
+        swap.getImage().scale(100,120);
+    }
     public void act() 
     {
         QuickSortWorld world=(QuickSortWorld)getWorld();

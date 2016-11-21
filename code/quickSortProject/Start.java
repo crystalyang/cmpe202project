@@ -13,7 +13,13 @@ public class Start extends Button
      * Act - do whatever the Start wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+
     private List<Chance> chance_list= new ArrayList<Chance>();
+    public void initial(Button start){
+        //ButtonLeaf start = new Start();
+        start.setImage("start.png");
+        start.getImage().scale(100,120);
+    }
     public void act() 
     {
         // Add your action code here.

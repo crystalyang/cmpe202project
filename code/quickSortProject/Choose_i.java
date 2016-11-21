@@ -16,6 +16,12 @@ public class Choose_i extends Button
      * Act - do whatever the Choose_i wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public void initial(Button c_i){
+        
+        //ButtonLeaf c_i = new Choose_i(); 
+        c_i.setImage("choosei.png");
+        c_i.getImage().scale(100,120);
+    }
     public void act() 
     {
        
