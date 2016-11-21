@@ -10,8 +10,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Number extends Actor
 {
-    int value;
-    boolean clicked;
+    private int value;
+    private boolean clicked;
     
     Number(int value) {
         this.value = value;
@@ -20,6 +20,14 @@ public class Number extends Actor
     
     public String getFile(){
         return (this.value + ".png");
+    }
+    
+    public int getValue(){
+        return value;
+    }
+    public void setValue(int _value){
+          value=_value;
+   
     }
     
     public void act() 

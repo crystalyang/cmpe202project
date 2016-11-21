@@ -6,13 +6,14 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Next_Stage extends Button
+public class Next_Stage extends Button 
 {
     /**
      * Act - do whatever the Next_Stage wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int stage;
+
     public boolean stage_control=true;
     public boolean before_next=false;
     public void initial(Button ns){
@@ -39,6 +40,15 @@ public class Next_Stage extends Button
         }
     }   
     
+    public boolean get_before_next(){
+        return before_next;
+    }
+    
+    public boolean get_stage_control(){
+        return stage_control;
+    }
+    
+    
     public void stage_change(){
         QuickSortWorld world=(QuickSortWorld)getWorld();
         Controller c = world.getObjects(Controller.class).get(0);
@@ -55,10 +65,10 @@ public class Next_Stage extends Button
                 int piv = c.pivots.get(this.stage+1);
                 int node = c.nodes.get(this.stage+1);
                 for(Number n:number){
-                    if(n.value==piv){
+                    if(n.getValue()==piv){
                         pivot.move(n);
                     }
-                    if(n.value==node){
+                    if(n.getValue()==node){
                         mj.move(n);
                     }
                 }
@@ -68,7 +78,7 @@ public class Next_Stage extends Button
             }
             else{
             //message to alert user to click next stage
-                if(s.swap_check==c.result.size()){
+                if(s.get_swap_check()==c.result.size()){
                     msg.setContent("Congratulations! Quick Sort is completed!");
                 }
                 else{
@@ -93,21 +103,28 @@ public class Next_Stage extends Button
         Swap s = world.getObjects(Swap.class).get(0);
         Controller c = world.getObjects(Controller.class).get(0);
     
-        if(c.stage>0 && s.swap_check==c.stage_alert.get(this.stage)){
+        if(c.getStage()>0 && s.get_swap_check()==c.stage_alert.get(this.stage)){
             before_next=false;
             return true;
         }
         else{
             //int[] arr = c.result.get(0);
             //if(arr[1]==c.pivots.get(0) || (s.swap_check>0 && s.swap_check==c.stage_alert.get(this.stage)-1)){
-            if(s.swap_check>0 && s.swap_check==(c.stage_alert.get(this.stage))-1){
+            if(s.get_swap_check()>0 && s.get_swap_check()==(c.stage_alert.get(this.stage))-1){
                 before_next=true;
             }
             return false;
         }
     }
 
-        // Add your action code here.
+     
+    
+    public  void handleRequest(String request){
+    } 
+    
+
+        
+    
 }   
     
     

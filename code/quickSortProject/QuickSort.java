@@ -16,12 +16,12 @@ import java.util.*;// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class QuickSort extends Actor
 {
 
-    int start;
-    int end;
+    private int start;
+    private int end;
 
     //Message m = new Message();
-    Number[] numbers= new Number[8];
-    public int[] array = new int[8];
+    private Number[] numbers= new Number[8];
+    private int[] array = new int[8];
     
     public QuickSort(){
         Set<Number> set = new HashSet<>();   
@@ -46,7 +46,7 @@ public class QuickSort extends Actor
         numbers = set.toArray(new Number[8]);
        // addedToWorld();
        for(int i=0;i<8;i++){
-           array[i]=numbers[i].value;
+           array[i]=numbers[i].getValue();
         } 
     }
     
@@ -74,6 +74,12 @@ public class QuickSort extends Actor
             // add pos image to the quicksort world.
             i+=1;
         }
+    }
+    
+    
+    public int[] getArray(){
+        return array;
+    
     }
     
  

@@ -8,9 +8,9 @@ import java.util.*;
  */
 public class Choose_j extends Button
 {
-    Number number = new Number(0);
-    Number number_j = new Number(1);
-    boolean check_j = false;
+    private Number number = new Number(0);
+    private Number number_j = new Number(1);
+    private boolean check_j = false;
     /**
      * Act - do whatever the Choose_j wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,6 +40,16 @@ public class Choose_j extends Button
          
     }    
     
+    
+    public  Number get_number_j(){
+        return number_j;
+    }
+    
+    public boolean get_check_j(){
+        return check_j;
+    }
+    
+    
     public Number getN_clicked(){
         QuickSortWorld world=(QuickSortWorld)getWorld();
         List<Number> num = world.getObjects(Number.class);
@@ -59,7 +69,7 @@ public class Choose_j extends Button
             check_j = true;
             mj.get(0).move(number_j);
             //message to let user know which j is chosen
-            msg.setContent(number.value + " is chosen for j.");
+            msg.setContent(number.getValue() + " is chosen for j.");
         }
         return number_j;
     }

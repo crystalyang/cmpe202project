@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * This class initiates all objects.
  * 
@@ -20,10 +20,10 @@ public class QuickSortWorld extends World implements Component
         prepare();
     }
     public void initial(Button bl){
-        // do nothing
- 
+        // do nothing 
     }
     private void prepare(){
+        /*
         Button[] bls = new Button[7];
         bls[0] = new Start();
         bls[1] = new Reset();
@@ -32,10 +32,34 @@ public class QuickSortWorld extends World implements Component
         bls[4] = new Swap();
         bls[5] = new Next_Stage();
         bls[6] = new Tutorial();
+        */
+        //List<Button> bls2 = new ArrayList<Button>();
+        ButtonFactory bf = new ButtonFactory();
+        FactoryPart[] bls = new FactoryPart[7];
+        bls[0] = bf.getStart();
+        bls[1] = bf.getReset();
+        bls[2] = bf.getChoose_i();
+        bls[3] = bf.getChoose_j();
+        bls[4] = bf.getSwap();
+        bls[5] = bf.getNext_Stage();
+        bls[6] = bf.getTutorial();
+        
+        // Swap swap=(Swap)bls[4];
+        // Next_Stage ns=(Next_Stage)bls[5];
+        
+        // swap.setSuccessor(ns);
+        
         for(int i = 0; i < bls.length;i++){
             bls[i].initial(bls[i]);
             addObject(bls[i],100 + i* 130,450);
         }
+        
+        //Facade facade = new Facade();  
+        //facade.Method();
+        
+        
+        Music music =new Music();
+        addObject(music,35,40);
         //QuickSort quickSort = new QuickSort();
         //addObject(quickSort, 367, 237);
        // quickSort.addedToWorld();
@@ -72,14 +96,14 @@ public class QuickSortWorld extends World implements Component
         
     }
     
-   private GreenfootSound music = new GreenfootSound("music.mp3"); 
-   public void started()  
-   {  
-       music.playLoop();  
-    }  
+   // private GreenfootSound music = new GreenfootSound("music.mp3"); 
+   // public void started()  
+   // {  
+       // music.playLoop();  
+    // }  
    
-    public void stopped()  
-    {  
-        music.stop();  
-    } 
+    // public void stopped()  
+    // {  
+        // music.stop();  
+    // } 
 }

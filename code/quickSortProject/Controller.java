@@ -17,10 +17,19 @@ public class Controller extends Actor
     List<Integer> pivots = new ArrayList<Integer>();
     List<Integer> nodes = new ArrayList<Integer>();
     List<Integer> stage_alert = new ArrayList<Integer>();
-    public int stage=0;
+    private int stage=0;
     public Controller(){
-        
+
     }
+
+    public int getStage(){
+        return stage;
+    }
+    
+    public void setStage(int _stage){
+        stage=_stage;
+    }
+    
     
     public void act() 
     {
@@ -30,13 +39,13 @@ public class Controller extends Actor
             QuickSort qs = world.getObjects(QuickSort.class).get(0);
             System.out.println("unsorted:");
             for(int i=0;i<8;i++){
-                System.out.print(qs.array[i]+"  ");
+                System.out.print(qs.getArray()[i]+"  ");
             }
             System.out.println(" ");
-            sort(qs.array);
+            sort(qs.getArray());
             System.out.println("sorted:");
             for(int i=0;i<8;i++){
-                System.out.print(qs.array[i]+"  ");
+                System.out.print(qs.getArray()[i]+"  ");
             }
             System.out.println(" ");
             for(int i=0;i<result.size();i++){
@@ -44,17 +53,15 @@ public class Controller extends Actor
                 test = result.get(i);
                 System.out.print(test[0]+"  "+ test[1]+"\n");
             }
-           
+
             control=false;
         }
         //test code end
     } 
-      
+
     //quickSort
- 
-   
+
     public void sort(int[] A) {
- 
         if (A == null || A.length == 0) {
             return;
         }
@@ -73,10 +80,10 @@ public class Controller extends Actor
                 stack.push(l);
                 stack.push(p - 1);
             }
-            
+
         }
     }
-    
+
     private int partition(int[] A, int start, int end) {
         if (start == end) {
             return start;
@@ -98,7 +105,7 @@ public class Controller extends Actor
                 else{
                     swap(A,left,right, false);     
                 }
-                
+
             }
         }
         if(left+1!=end){
@@ -108,11 +115,11 @@ public class Controller extends Actor
         stage = stage+1;
         return left+1;
     }
-    
+
     private void swap(int[] A, int i, int j, boolean stage_change) {
         if(stage_change){
             //n=stage_alert.get(0) when users swap the nth successfully, allows clicking the next stage
-            
+
         }
         result.add(new int[]{A[i],A[j]});
         //System.out.println("operate switch:"+A[i]+"   "+A[j]);

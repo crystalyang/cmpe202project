@@ -15,30 +15,15 @@ public class Message extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage img_m=new GreenfootImage("msg.png");
-    
-    public String content;
+  
+    private String content;
     
 
     public Message(String m){
         img_m = this.getImage();
-
-         
-        //img_m = this.getImage();
-       // this.img_m=new GreenfootImage("msg.png");
-        //img_m.scale(getImage().getWidth()-35,getImage().getHeight()-100);
-        //img_m.set
         img_m.setFont(new java.awt.Font("AppleGothic", java.awt.Font.PLAIN, 16));
         img_m.drawString(m,30,80);
         setImage(img_m);
-        String[] font=GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-        for(String n:font){
-            //System.out.print(n+"~");
-        }
-        //img_m.setColor(Color.BLACK);
-        //img_m.drawString(m,500,50);
-        //getImage().scale(getImage().getWidth()-35,getImage().getHeight()-100);
-        //img_m.drawImage(txtImg,(img_m.getWidth()-txtImg.getWidth())/2,(img_m.getHeight()-txtImg.getHeight())/2);
-        
         content = m;
     }
     
@@ -52,6 +37,12 @@ public class Message extends Actor
         content = m;
         //other color/font
     }
+    
+    public String getContent(){
+        return content;
+    }
+    
+    
     public void act() 
     {
         // Add your action code here.

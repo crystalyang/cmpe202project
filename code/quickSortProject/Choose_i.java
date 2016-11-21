@@ -8,10 +8,10 @@ import java.util.*;
  */
 public class Choose_i extends Button
 {
-    int clicked_value=0;
-    Number number = new Number(0);
-    Number number_i = new Number(1);
-    boolean check_i = false;
+    private int clicked_value=0;
+    private Number number = new Number(0);
+    private Number number_i = new Number(1);
+    private boolean check_i = false;
     /**
      * Act - do whatever the Choose_i wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,6 +40,16 @@ public class Choose_i extends Button
        }
     }    
     
+    
+    public Number get_number_i(){
+        return number_i;
+    }
+    
+    
+    public boolean get_check_i(){
+        return check_i;
+    }
+    
     public Number getN_clicked(){
         QuickSortWorld world=(QuickSortWorld)getWorld();
         List<Number> num = world.getObjects(Number.class);
@@ -47,7 +57,7 @@ public class Choose_i extends Button
         Message msg = msgs.get(0);
         for(Number n:num){
             if(Greenfoot.mouseClicked(n)){
-                clicked_value = n.value;
+                clicked_value = n.getValue();
                 number = n; 
             }
         }
@@ -59,7 +69,7 @@ public class Choose_i extends Button
             mi.get(0).move(number_i);
             
             //message to let user know which j is chosen
-            msg.setContent(number.value + " is chosen for i.");
+            msg.setContent(number.getValue() + " is chosen for i.");
         }
         return number_i;
     }

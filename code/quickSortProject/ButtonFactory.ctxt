@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ButtonFactory
+comment0.text=\n\ Write\ a\ description\ of\ class\ ButtonFactory\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=ButtonFactory()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ ButtonFactory\n
+comment2.params=
+comment2.target=FactoryPart\ getStart()
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment3.params=
+comment3.target=FactoryPart\ getChoose_i()
+comment4.params=
+comment4.target=FactoryPart\ getChoose_j()
+comment5.params=
+comment5.target=FactoryPart\ getSwap()
+comment6.params=
+comment6.target=FactoryPart\ getNext_Stage()
+comment7.params=
+comment7.target=FactoryPart\ getReset()
+comment8.params=
+comment8.target=FactoryPart\ getTutorial()
+numComments=9

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Button extends Actor implements Component
+public abstract class Button extends FactoryPart implements Component
 {
     /**
      * Act - do whatever the Button wants to do. This method is called whenever
@@ -15,17 +15,23 @@ public class Button extends Actor implements Component
     public void act() 
     {
         // Add your action code here.
-    }  
-   
-    public void initial(Button bl) {
+    }
+<<<<<<< HEAD
+    
+
+    public void initial(FactoryPart bl)
+    {
         
-    
+=======
+    public void initial(Button bl) {
+>>>>>>> mengxuan_cai
     }
+    
     public Button(){
-    GreenfootImage img = getImage();
-    img.scale(70,70);
+        GreenfootImage img = getImage();
+        img.scale(70,70);
     }
-    
+
     public boolean mouseOnObject(Actor obj)
     { 
         MouseInfo mi = Greenfoot.getMouseInfo();
@@ -42,5 +48,5 @@ public class Button extends Actor implements Component
             return false;
         }
     }
- 
+
 }
