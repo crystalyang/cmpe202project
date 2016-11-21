@@ -12,6 +12,7 @@ class.Choose_j.image=choosej.png
 class.Choose_j.superclass=Button
 class.Component.superclass=
 class.Controller.superclass=greenfoot.Actor
+class.Facade.superclass=
 class.FactoryPart.superclass=
 class.MPoweredOff.superclass=
 class.MPoweredOn.superclass=

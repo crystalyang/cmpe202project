@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class FactoryPart extends Actor
+public abstract class FactoryPart extends Actor 
 {
     // instance variables - replace the example below with your own
     public void act() 
