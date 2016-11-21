@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class QuickSortWorld extends World
+public class QuickSortWorld extends World implements Component
 {
     protected boolean started = false;
     /**
@@ -19,13 +19,28 @@ public class QuickSortWorld extends World
         super(1000, 1000, 1); 
         prepare();
     }
-    
+    public void initial(Button bl){
+        // do nothing
+ 
+    }
     private void prepare(){
+        Button[] bls = new Button[7];
+        bls[0] = new Start();
+        bls[1] = new Reset();
+        bls[2] = new Choose_i();
+        bls[3] = new Choose_j();
+        bls[4] = new Swap();
+        bls[5] = new Next_Stage();
+        bls[6] = new Tutorial();
+        for(int i = 0; i < bls.length;i++){
+            bls[i].initial(bls[i]);
+            addObject(bls[i],100 + i* 130,450);
+        }
         //QuickSort quickSort = new QuickSort();
         //addObject(quickSort, 367, 237);
        // quickSort.addedToWorld();
         
-        Start start=new Start();
+        /*Start start=new Start();
         start.setImage("start.png");
         start.getImage().scale(100,120);
         addObject(start,100,450);
@@ -52,7 +67,7 @@ public class QuickSortWorld extends World
         Tutorial t = new Tutorial();
         t.setImage("tutorial.png");
         t.getImage().scale(100,120);
-        addObject(t,880,450);
+        addObject(t,880,450);*/
         
         
     }

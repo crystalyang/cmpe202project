@@ -14,6 +14,11 @@ public class Tutorial extends Button
      * Act - do whatever the Tutorial wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public void initial(Button t){
+        //ButtonLeaf t = new Tutorial();
+        t.setImage("tutorial.png");
+        t.getImage().scale(100,120);
+    }
     public void act() 
     {
         

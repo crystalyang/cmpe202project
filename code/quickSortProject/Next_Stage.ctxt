@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=Next_Stage
 comment0.text=\n\ Write\ a\ description\ of\ class\ Next_Stage\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=void\ act()
+comment1.params=ns
+comment1.target=void\ initial(Button)
 comment2.params=
-comment2.target=void\ stage_change()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=boolean\ pass()
-numComments=4
+comment3.target=void\ stage_change()
+comment4.params=
+comment4.target=boolean\ pass()
+numComments=5

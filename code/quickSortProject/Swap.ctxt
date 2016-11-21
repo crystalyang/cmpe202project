@@ -1,12 +1,14 @@
 #BlueJ class context
 comment0.target=Swap
 comment0.text=\n\ Write\ a\ description\ of\ class\ Swap\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=void\ act()
-comment2.params=i\ j
-comment2.target=void\ swapNumber(Number,\ Number)
-comment3.params=
-comment3.target=void\ clicked()
-comment4.params=i\ j
-comment4.target=boolean\ checkSwap(Number,\ Number)
-numComments=5
+comment1.params=swap
+comment1.target=void\ initial(Button)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=i\ j
+comment3.target=void\ swapNumber(Number,\ Number)
+comment4.params=
+comment4.target=void\ clicked()
+comment5.params=i\ j
+comment5.target=boolean\ checkSwap(Number,\ Number)
+numComments=6

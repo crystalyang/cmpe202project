@@ -14,6 +14,11 @@ public class Start extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     List<Chance> chance_list= new ArrayList<Chance>();
+    public void initial(Button start){
+        //ButtonLeaf start = new Start();
+        start.setImage("start.png");
+        start.getImage().scale(100,120);
+    }
     public void act() 
     {
         // Add your action code here.

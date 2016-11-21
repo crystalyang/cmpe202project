@@ -14,6 +14,11 @@ public class Swap extends Button
      */
     public int swap_check=0;
     public int error=0;
+    public void initial(Button swap){
+        //ButtonLeaf swap = new Swap();
+        swap.setImage("swap.png");
+        swap.getImage().scale(100,120);
+    }
     public void act() 
     {
         QuickSortWorld world=(QuickSortWorld)getWorld();

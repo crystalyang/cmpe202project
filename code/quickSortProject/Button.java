@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Button extends Actor
+public class Button extends Actor implements Component
 {
     /**
      * Act - do whatever the Button wants to do. This method is called whenever
@@ -16,7 +16,11 @@ public class Button extends Actor
     {
         // Add your action code here.
     }  
+   
+    public void initial(Button bl) {
+        
     
+    }
     public Button(){
     GreenfootImage img = getImage();
     img.scale(70,70);
