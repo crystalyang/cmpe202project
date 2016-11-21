@@ -16,17 +16,11 @@ public abstract class Button extends FactoryPart implements Component
     {
         // Add your action code here.
     }
-<<<<<<< HEAD
-    
-
+  
     public void initial(FactoryPart bl)
     {
-        
-=======
-    public void initial(Button bl) {
->>>>>>> mengxuan_cai
+
     }
-    
     public Button(){
         GreenfootImage img = getImage();
         img.scale(70,70);
