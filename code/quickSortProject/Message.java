@@ -8,7 +8,7 @@ import java.awt.GraphicsEnvironment;
  * @version (a version number or a date)
  */
 import java.awt.Color;
-public class Message extends Actor
+public class Message extends Actor implements Target
 {
     /**
      * Act - do whatever the Message wants to do. This method is called whenever
