@@ -69,7 +69,9 @@ public class Choose_i extends Button
             mi.get(0).move(number_i);
             
             //message to let user know which j is chosen
-            msg.setContent(number.getValue() + " is chosen for i.");
+            msg.sayIChoosed(number.getValue());
+            
+            //msg.setContent(number.getValue() + " is chosen for i.");
         }
         return number_i;
     }

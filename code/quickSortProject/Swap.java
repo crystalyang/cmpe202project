@@ -84,26 +84,33 @@ public class Swap extends Button
                 swap_check++;
                 ns.stage_change();
                 if(ns.get_before_next()){
-                    msg.setContent("Time to move the pivot. Swap the duck\n number with the number after i.");
+                    msg.sayTimeMovePivot();
+                    //msg.setContent("Time to move the pivot. Swap the duck\n number with the number after i.");
+                    
                 }
                 else{
-                    msg.setContent("  Great Job! \n  Go on with another i and j now.");
+                    //msg.setContent("  Great Job! \n  Go on with another i and j now.");
+                    msg.saySwapSucceed();
                 }
             }
             else if(!checkSwap(i,j)){
                 error = error+1;
                 if(error<5){
-                    msg.setContent("  You cannot swap those them!\n      Try different numbers.\n   You have another "+(5-error)+" chances.");
+                    //msg.setContent("  You cannot swap those them!\n      Try different numbers.\n   You have another "+(5-error)+" chances.");
+                    msg.sayCannotSwapWithChance(5-error);
                     cl.get(error-1).getImage().setTransparency(0);
                 }
                 else{
                     cl.get(4).getImage().setTransparency(0);
-                    msg.setContent("You tried five wrong swaps! \n Game End. Please reset and start again.");
+                    msg.sayGameOver();
+                    //msg.setContent("You tried five wrong swaps! \n Game End. Please reset and start again.");
                     //Greenfoot.stop();
                 }
             }
             else{
-                msg.setContent("Please click the Next Stage button.");
+                
+                msg.sayNextStage();
+                //msg.setContent("Please click the Next Stage button.");
             }
             
         }

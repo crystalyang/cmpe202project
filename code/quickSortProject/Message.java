@@ -18,7 +18,72 @@ public class Message extends Actor
   
     private String content;
     
+    private AdapteeObject adaptee;
+    
+    public void act() 
+    {   
+    } 
+    
+    public Message(){
+        adaptee=new AdapteeObject();
+    }
+    
+    
 
+    public void sayChooseIJ(){
+        QuickSortWorld world=(QuickSortWorld)getWorld();
+        world.addObject(adaptee, 500, 680);
+        adaptee.printMessage("Choose a number: click number then click  \n\"Select i\" or \"Select j\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
+    }
+    
+    public void saySwapSucceed(){
+        adaptee.printMessage("  Great Job! \n  Go on with another i and j now.");
+    }
+    
+    
+    public void sayIChoosed(int i){
+        adaptee.printMessage(i+"  is chosen for i.");
+        
+    }
+    
+     public void sayJChoosed(int j){
+        adaptee.printMessage(j+"  is chosen for j.");
+        
+    }
+    
+    
+     public void sayTimeMovePivot(){
+        adaptee.printMessage("Time to move the pivot. Swap the duck\n number with the number after i.");
+    }
+    
+    
+    public void sayCannotSwapWithChance(int chance){
+        adaptee.printMessage("  You cannot swap those them!\n      Try different numbers.\n   You have another "+chance+" chances.");
+    }
+    
+     public void sayGameOver(){
+        adaptee.printMessage("You tried five wrong swaps! \n Game End. Please reset and start again.");
+    }
+    
+     public void sayNextStage(){
+        adaptee.printMessage("Please click the Next Stage button.");
+    }
+    
+      public void sayGameSucceed(){
+        adaptee.printMessage("Congratulations! Quick Sort is completed!");
+    }
+    
+       public void sayReadyForNextStage(){
+        adaptee.printMessage("You are ready for the next stage! \n\n  Click the Next Stage Button");
+    }
+    
+     public void sayNotReadyForNextStage(){
+        adaptee.printMessage("You are not ready for the next stage!");
+    }
+    
+    
+    
+    
     public Message(String m){
         img_m = this.getImage();
         img_m.setFont(new java.awt.Font("AppleGothic", java.awt.Font.PLAIN, 16));
@@ -43,8 +108,5 @@ public class Message extends Actor
     }
     
     
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+       
 }

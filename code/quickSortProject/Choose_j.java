@@ -69,7 +69,8 @@ public class Choose_j extends Button
             check_j = true;
             mj.get(0).move(number_j);
             //message to let user know which j is chosen
-            msg.setContent(number.getValue() + " is chosen for j.");
+            msg.sayJChoosed(number.getValue());
+            //msg.setContent(number.getValue() + " is chosen for j.");
         }
         return number_j;
     }

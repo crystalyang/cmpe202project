@@ -74,16 +74,20 @@ public class Next_Stage extends Button
                 }
                 this.stage = this.stage+1;
                 stage_control=true;
-                msg.setContent("Go on with another i and j. \n Choose between J and pivot now.");
+                msg.sayChooseIJ();
+                //msg.setContent("Go on with another i and j. \n Choose between J and pivot now.");
             }
             else{
             //message to alert user to click next stage
                 if(s.get_swap_check()==c.result.size()){
-                    msg.setContent("Congratulations! Quick Sort is completed!");
+                    msg.sayGameSucceed();
+                    //msg.setContent("Congratulations! Quick Sort is completed!");
                 }
                 else{
                     stage_control=false;
-                    msg.setContent("You are ready for the next stage! \n\n  Click the Next Stage Button");
+                    msg.sayReadyForNextStage();
+                    
+                    //msg.setContent("You are ready for the next stage! \n\n  Click the Next Stage Button");
                 }
                 
             }
@@ -91,7 +95,8 @@ public class Next_Stage extends Button
         else{
             if(Greenfoot.mouseClicked(this)){
                 //error message
-                msg.setContent("You are not ready for the next stage!");
+                msg.sayNotReadyForNextStage();
+                //msg.setContent("You are not ready for the next stage!");
             }
             
         }
