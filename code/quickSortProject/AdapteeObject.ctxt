@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=AdapteeObject
+comment0.text=\n\ Write\ a\ description\ of\ class\ AdapteeObject\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=AdapteeObject()
+comment2.params=s
+comment2.target=void\ printMessage(java.lang.String)
+numComments=3

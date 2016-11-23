@@ -58,8 +58,8 @@ public class QuickSortWorld extends World implements Component
         //facade.Method();
         
         
-        Music music =new Music();
-        addObject(music,35,40);
+        //Music music =new Music();
+        //addObject(music,35,40);
         //QuickSort quickSort = new QuickSort();
         //addObject(quickSort, 367, 237);
        // quickSort.addedToWorld();
@@ -96,14 +96,14 @@ public class QuickSortWorld extends World implements Component
         
     }
     
-   // private GreenfootSound music = new GreenfootSound("music.mp3"); 
-   // public void started()  
-   // {  
-       // music.playLoop();  
-    // }  
+   private GreenfootSound music = new GreenfootSound("music.mp3"); 
+   public void started()  
+   {  
+        music.playLoop();  
+   }  
    
-    // public void stopped()  
-    // {  
-        // music.stop();  
-    // } 
+    public void stopped()  
+     {  
+        music.stop();  
+     } 
 }

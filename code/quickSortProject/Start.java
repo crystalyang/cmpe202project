@@ -50,7 +50,7 @@ public class Start extends Button
     
      public void clicked(){
      if(Greenfoot.mouseClicked(this)) {
-             QuickSortWorld world=(QuickSortWorld)getWorld();
+            QuickSortWorld world=(QuickSortWorld)getWorld();
             List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             //qs.get(0).addedToWorldNextLine();
             if(world.started == false){
