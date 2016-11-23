@@ -37,12 +37,19 @@ public class QuickSortWorld extends World implements Component
         ButtonFactory bf = new ButtonFactory();
         FactoryPart[] bls = new FactoryPart[7];
         bls[0] = bf.getStart();
+        bls[0].setImage("start.png");
         bls[1] = bf.getReset();
+        bls[1].setImage("reset.png");
         bls[2] = bf.getChoose_i();
+        bls[2].setImage("choosei.png");
         bls[3] = bf.getChoose_j();
+        bls[3].setImage("choosej.png");
         bls[4] = bf.getSwap();
+        bls[4].setImage("swap.png");
         bls[5] = bf.getNext_Stage();
+        bls[5].setImage("nextstage.png");
         bls[6] = bf.getTutorial();
+        bls[6].setImage("tutorial.png");
         
         // Swap swap=(Swap)bls[4];
         // Next_Stage ns=(Next_Stage)bls[5];
@@ -51,6 +58,7 @@ public class QuickSortWorld extends World implements Component
         
         for(int i = 0; i < bls.length;i++){
             bls[i].initial(bls[i]);
+            bls[i].getImage().scale(100,120);
             addObject(bls[i],100 + i* 130,450);
         }
         
