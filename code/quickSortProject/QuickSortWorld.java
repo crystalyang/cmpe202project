@@ -23,17 +23,7 @@ public class QuickSortWorld extends World implements Component
         // do nothing 
     }
     private void prepare(){
-        /*
-        Button[] bls = new Button[7];
-        bls[0] = new Start();
-        bls[1] = new Reset();
-        bls[2] = new Choose_i();
-        bls[3] = new Choose_j();
-        bls[4] = new Swap();
-        bls[5] = new Next_Stage();
-        bls[6] = new Tutorial();
-        */
-        //List<Button> bls2 = new ArrayList<Button>();
+
         ButtonFactory bf = new ButtonFactory();
         FactoryPart[] bls = new FactoryPart[7];
         bls[0] = bf.getStart();
@@ -51,57 +41,12 @@ public class QuickSortWorld extends World implements Component
         bls[6] = bf.getTutorial();
         bls[6].setImage("tutorial.png");
         
-        // Swap swap=(Swap)bls[4];
-        // Next_Stage ns=(Next_Stage)bls[5];
-        
-        // swap.setSuccessor(ns);
-        
         for(int i = 0; i < bls.length;i++){
             bls[i].initial(bls[i]);
             bls[i].getImage().scale(100,120);
             addObject(bls[i],100 + i* 130,450);
         }
-        
-        //Facade facade = new Facade();  
-        //facade.Method();
-        
-        
-        //Music music =new Music();
-        //addObject(music,35,40);
-        //QuickSort quickSort = new QuickSort();
-        //addObject(quickSort, 367, 237);
-       // quickSort.addedToWorld();
-        
-        /*Start start=new Start();
-        start.setImage("start.png");
-        start.getImage().scale(100,120);
-        addObject(start,100,450);
-        Reset reset = new Reset();
-        reset.setImage("reset.png");
-        reset.getImage().scale(100,120);
-        addObject(reset,230,450);
-        Choose_i c_i = new Choose_i();
-        c_i.setImage("choosei.png");
-        c_i.getImage().scale(100,120);
-        addObject(c_i,360,450);
-        Choose_j c_j = new Choose_j();
-        c_j.setImage("choosej.png");
-        c_j.getImage().scale(100,120);
-        addObject(c_j,490,450);
-        Swap swap = new Swap();
-        swap.setImage("swap.png");
-        swap.getImage().scale(100,120);
-        addObject(swap,620,450);
-        Next_Stage ns = new Next_Stage();
-        ns.setImage("nextstage.png");
-        ns.getImage().scale(100,120);
-        addObject(ns,750,450);
-        Tutorial t = new Tutorial();
-        t.setImage("tutorial.png");
-        t.getImage().scale(100,120);
-        addObject(t,880,450);*/
-        
-        
+ 
     }
     
    private GreenfootSound music = new GreenfootSound("music.mp3"); 

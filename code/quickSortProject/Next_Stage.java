@@ -17,7 +17,6 @@ public class Next_Stage extends Button
     public boolean stage_control=true;
     public boolean before_next=false;
     public void initial(Button ns){
-        //ButtonLeaf ns = new Next_Stage();
         ns.setImage("nextstage.png");
         ns.getImage().scale(100,120);
     }
@@ -75,19 +74,19 @@ public class Next_Stage extends Button
                 this.stage = this.stage+1;
                 stage_control=true;
                 msg.sayChooseIJ();
-                //msg.setContent("Go on with another i and j. \n Choose between J and pivot now.");
+                
             }
             else{
             //message to alert user to click next stage
                 if(s.get_swap_check()==c.result.size()){
                     msg.sayGameSucceed();
-                    //msg.setContent("Congratulations! Quick Sort is completed!");
+                   
                 }
                 else{
                     stage_control=false;
                     msg.sayReadyForNextStage();
                     
-                    //msg.setContent("You are ready for the next stage! \n\n  Click the Next Stage Button");
+                   
                 }
                 
             }
@@ -113,9 +112,7 @@ public class Next_Stage extends Button
             return true;
         }
         else{
-            //int[] arr = c.result.get(0);
-            //if(arr[1]==c.pivots.get(0) || (s.swap_check>0 && s.swap_check==c.stage_alert.get(this.stage)-1)){
-            if(s.get_swap_check()>0 && s.get_swap_check()==(c.stage_alert.get(this.stage))-1){
+             if(s.get_swap_check()>0 && s.get_swap_check()==(c.stage_alert.get(this.stage))-1){
                 before_next=true;
             }
             return false;

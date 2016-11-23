@@ -18,7 +18,6 @@ public class Choose_i extends Button
      */
     public void initial(Button c_i){
         
-        //ButtonLeaf c_i = new Choose_i(); 
         c_i.setImage("choosei.png");
         c_i.getImage().scale(100,120);
     }
@@ -70,8 +69,6 @@ public class Choose_i extends Button
             
             //message to let user know which j is chosen
             msg.sayIChoosed(number.getValue());
-            
-            //msg.setContent(number.getValue() + " is chosen for i.");
         }
         return number_i;
     }

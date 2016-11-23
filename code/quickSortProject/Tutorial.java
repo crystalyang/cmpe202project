@@ -15,7 +15,7 @@ public class Tutorial extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void initial(Button t){
-        //ButtonLeaf t = new Tutorial();
+
         t.setImage("tutorial.png");
         t.getImage().scale(100,120);
     }

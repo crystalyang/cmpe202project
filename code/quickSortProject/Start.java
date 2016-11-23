@@ -18,7 +18,6 @@ public class Start extends Button
     
     //@Override
     public void initial(Button start){
-        //ButtonLeaf start = new Start();
         start.setImage("start.png");
         start.getImage().scale(100,120);
     }
@@ -27,7 +26,6 @@ public class Start extends Button
     {
         // Add your action code here.
         clicked();
-        //QuickSortWorld world=(QuickSortWorld)getWorld();
       
         if(mouseOnObject(this)) {
             this.setImage("start_p.png");
@@ -52,12 +50,8 @@ public class Start extends Button
      if(Greenfoot.mouseClicked(this)) {
             QuickSortWorld world=(QuickSortWorld)getWorld();
             List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
-            //qs.get(0).addedToWorldNextLine();
             if(world.started == false){
-                //int index=0;
-                //for(int j=0;j<8;j++){
-                    //setPos(index++, j+1, world);
-                //}
+
                 
                 QuickSort quickSort = new QuickSort();
                 world.addObject(quickSort, 367, 237);
@@ -105,43 +99,16 @@ public class Start extends Button
                 
                
                 Message msg=new Message();
-                //Message msg = new Message("Choose a number: click number then click  \n\"Select i\" or \"Select j\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
-                
-                //msg.setImage("msg.png");
-                //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
                 world.addObject(msg, 500, 680);
                 msg.sayChooseIJ();
 
                 Controller controller = new Controller();
                 world.addObject(controller,1,1);
-
-                
-                //List<Message> message=world.getObjectsInRange(1000,Message.class);
-                
                 
             }
         }
     }
-    
-    // clean up later
-    // public void addedToWorldNextLine(){
-        // QuickSortWorld world=(QuickSortWorld)getWorld();
-        // int index=0;
-        // for(int j=0;j<8;j++){
-            // setPos(index++, j+1, world);
-        // }
-    // }
-   
-    
-    //public void setPos(int index, int i, World world) {
-           // Position pos = new Position(index);
-            //pos.setImage(pos.getFile());
-           // GreenfootImage posImg = pos.getImage();
-           // posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
-            //world.addObject(pos, 110 * i, 250);
-   // }
-    
-    
+
     
     public void setNums(int index, int i, World world){
         

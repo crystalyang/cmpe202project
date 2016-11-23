@@ -58,12 +58,6 @@ public class QuickSort extends Actor
     //add number images to the world
     protected void addedToWorld(){ 
         QuickSortWorld world=(QuickSortWorld)getWorld();
-        /* //Position class 
-        int i=1;
-        for(Number n: numbers){
-            setPos(index++, i, world);
-            i++;
-        } */
         int index = 0;
         int i=1;
         // then add numbers
@@ -71,7 +65,6 @@ public class QuickSort extends Actor
             GreenfootImage img = n.getImage();
             img.scale(img.getWidth()-35,img.getHeight()-57);
             world.addObject(n,110*i,200);
-            // add pos image to the quicksort world.
             i+=1;
         }
     }
@@ -81,11 +74,5 @@ public class QuickSort extends Actor
         return array;
     
     }
-    
- 
-    //check error times
-   // public int errorCount() {
-    //}
-
     
 }

@@ -13,7 +13,6 @@ public class Reset extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void initial(Button reset){
-        //ButtonLeaf reset = new Reset();
         reset.setImage("reset.png");
         reset.getImage().scale(100,120);
     }

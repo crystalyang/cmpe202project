@@ -15,7 +15,6 @@ public class Swap extends Button
     public int swap_check=0;
     public int error=0;
     public void initial(Button swap){
-        //ButtonLeaf swap = new Swap();
         swap.setImage("swap.png");
         swap.getImage().scale(100,120);
     }
@@ -67,16 +66,7 @@ public class Swap extends Button
         List<Chance> cl = world.getObjects(Start.class).get(0).get_chance_list();
         if(msgs.size() !=0){
         Message msg = msgs.get(0);
-        /*  //test code
-        List<Number> num = world.getObjects(Number.class);
-        for(Number n:num){
-            if(n==ci.get(0).number_i){
-                System.out.println(ci.get(0).number_i.value +"value for i get");
-            }
-            if(n==cj.get(0).number_j){
-                System.out.println(cj.get(0).number_j.value +"value for j get");
-            }
-        } */
+
         Number i = ci.get(0).get_number_i();
         Number j = cj.get(0).get_number_j();
         if(ci.get(0).get_check_i() && cj.get(0).get_check_j()){
@@ -86,32 +76,31 @@ public class Swap extends Button
                 ns.stage_change();
                 if(ns.get_before_next()){
                     msg.sayTimeMovePivot();
-                    //msg.setContent("Time to move the pivot. Swap the duck\n number with the number after i.");
+                    
                     
                 }
                 else{
-                    //msg.setContent("  Great Job! \n  Go on with another i and j now.");
+                    
                     msg.saySwapSucceed();
                 }
             }
             else if(!checkSwap(i,j)){
                 error = error+1;
                 if(error<5){
-                    //msg.setContent("  You cannot swap those them!\n      Try different numbers.\n   You have another "+(5-error)+" chances.");
+                    
                     msg.sayCannotSwapWithChance(5-error);
                     cl.get(error-1).getImage().setTransparency(0);
                 }
                 else{
                     cl.get(4).getImage().setTransparency(0);
                     msg.sayGameOver();
-                    //msg.setContent("You tried five wrong swaps! \n Game End. Please reset and start again.");
-                    //Greenfoot.stop();
+
                 }
             }
             else{
                 
                 msg.sayNextStage();
-                //msg.setContent("Please click the Next Stage button.");
+                
             }
         }
     }

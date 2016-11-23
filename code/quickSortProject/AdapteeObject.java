@@ -13,11 +13,7 @@ public class AdapteeObject extends Actor implements Adaptee
    GreenfootImage img_m=new GreenfootImage("msg.png");
    
    public AdapteeObject(){
-       // GreenfootImage img_m=new GreenfootImage("msg.png");
-        // img_m = this.getImage();
-        // img_m.setFont(new java.awt.Font("AppleGothic", java.awt.Font.PLAIN, 16));
-        // img_m.drawString("fuuuuuuuu",30,80);
-        // setImage(img_m);
+
    }
     
     public void printMessage(String s){
@@ -27,6 +23,6 @@ public class AdapteeObject extends Actor implements Adaptee
         
         this.getImage().setFont(new Font("AppleGothic", Font.PLAIN, 16));
         this.getImage().drawString(s,30,80);
-        //content = m;
+
     }    
 }
