@@ -65,6 +65,7 @@ public class Swap extends Button
         Next_Stage ns = world.getObjects(Next_Stage.class).get(0);
         List<Message> msgs = world.getObjects(Message.class);
         List<Chance> cl = world.getObjects(Start.class).get(0).get_chance_list();
+        if(msgs.size() !=0){
         Message msg = msgs.get(0);
         /*  //test code
         List<Number> num = world.getObjects(Number.class);
@@ -112,8 +113,8 @@ public class Swap extends Button
                 msg.sayNextStage();
                 //msg.setContent("Please click the Next Stage button.");
             }
-            
         }
+    }
     }
     
     public boolean checkSwap(Number i, Number j){
