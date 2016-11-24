@@ -2,8 +2,12 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.restlet.representation.Representation;
+import org.restlet.data.MediaType;
+import org.restlet.representation.*;
 import org.restlet.resource.ClientResource;
+import org.json.JSONObject ;
+import org.restlet.ext.json.* ;
+
 
 import java.io.IOException;
 
@@ -29,5 +33,16 @@ public class serverTest {
         Representation representation = new ClientResource("http://localhost:8080/helloword").get();
         Assert.assertEquals("application/json", representation.getMediaType().toString());
         Assert.assertEquals("{\"rank\":\"helloworld\"}", representation.getText());
+    }
+
+    @Test
+    public void postRank() throws IOException{
+        ClientResource client  = new ClientResource("http://localhost:8080/helloword");
+        JSONObject rank = new JSONObject();
+        rank.put("rank", "5");
+        client.post(new JsonRepresentation(rank),MediaType.APPLICATION_JSON);
+
+//        Assert.assertEquals("application/json", representation.getMediaType().toString());
+//        Assert.assertEquals("{\"rank\":\"helloworld\"}", representation.getText());
     }
 }
