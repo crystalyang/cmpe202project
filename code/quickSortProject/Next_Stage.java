@@ -80,13 +80,11 @@ public class Next_Stage extends Button
             //message to alert user to click next stage
                 if(s.get_swap_check()==c.result.size()){
                     msg.sayGameSucceed();
-                   
+                    Greenfoot.stop();
                 }
                 else{
                     stage_control=false;
-                    msg.sayReadyForNextStage();
-                    
-                   
+                    msg.sayReadyForNextStage(); 
                 }
                 
             }

@@ -8,10 +8,7 @@ import java.util.*;
  */
 public class Swap extends Button
 {
-    /**
-     * Act - do whatever the Swap wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+   
     public int swap_check=0;
     public int error=0;
     public void initial(Button swap){
@@ -66,7 +63,6 @@ public class Swap extends Button
         List<Chance> cl = world.getObjects(Start.class).get(0).get_chance_list();
         if(msgs.size() !=0){
         Message msg = msgs.get(0);
-
         Number i = ci.get(0).get_number_i();
         Number j = cj.get(0).get_number_j();
         if(ci.get(0).get_check_i() && cj.get(0).get_check_j()){
@@ -75,32 +71,26 @@ public class Swap extends Button
                 swap_check++;
                 ns.stage_change();
                 if(ns.get_before_next()){
-                    msg.sayTimeMovePivot();
-                    
-                    
+                    msg.sayTimeMovePivot();   
                 }
-                else{
-                    
+                else{       
                     msg.saySwapSucceed();
                 }
             }
             else if(!checkSwap(i,j)){
                 error = error+1;
-                if(error<5){
-                    
+                if(error<5){                 
                     msg.sayCannotSwapWithChance(5-error);
                     cl.get(error-1).getImage().setTransparency(0);
                 }
                 else{
                     cl.get(4).getImage().setTransparency(0);
                     msg.sayGameOver();
-
+                    Greenfoot.stop();
                 }
             }
             else{
-                
                 msg.sayNextStage();
-                
             }
         }
     }

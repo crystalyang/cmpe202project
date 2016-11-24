@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=QuickSort
-comment0.text=\n\ This\ class\ have\ sevearl\ responsibilities.\n\ 1)\ create\ random\ numbers\n\ 2)\ count\ the\ errors.\ When\ error\ number\ \=\ 3,\ game\ ends.\n\ 3)\ check\ whether\ user\ put\ number\ in\ the\ correct\ grid\n\ 4)\ check\ whether\ the\ sorting\ operation\ for\ a\ pivot\ ends\n\ 5)\ check\ whether\ game\ ends\n\ 6)\ update\ grid\ background\ color\ according\ to\ game\ phase\n\ 7)\ calculate\ operational\ numbers\ and\ correct\ sequence\ of\ them\ in\ the\ backend\n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=QuickSort()
 comment2.params=
