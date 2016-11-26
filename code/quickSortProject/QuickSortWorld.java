@@ -55,7 +55,9 @@ public class QuickSortWorld extends World implements Component
             bls[i].getImage().scale(100,120);
             addObject(bls[i],100 + i* 130,450);
         }
-        int[] top3 = getRank(); //get the rank using API call from db
+        //int[] top3 = getRank(); //get the rank using API call from db
+        //for sample purpose
+        int[] top3 = new int[]{89998,89998,89999};
         //sample [89998,89998,89999] integer in seconds
     }
     
