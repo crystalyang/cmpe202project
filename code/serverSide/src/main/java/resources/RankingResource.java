@@ -1,4 +1,7 @@
 package resources;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.query.*;
 import org.json.JSONObject;
 import org.restlet.representation.*;
 import org.restlet.resource.Get;
@@ -8,14 +11,15 @@ import org.restlet.ext.json.* ;
 
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by Crystal on 11/23/16.
  */
 public class RankingResource extends ServerResource {
     @Get
-    public Rank getRank(){
-        return new Rank("helloworld");
+    public void getRank(){
+        dbConnection();
     }
 
     @Post
@@ -25,6 +29,21 @@ public class RankingResource extends ServerResource {
         System.out.println(action);
 
 
+
+    }
+
+    public void dbConnection(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        try {
+            String hql = "from Timer ";
+
+            Query query = session.createQuery(hql);
+            List<Timer> results = (List<Timer>) query.list();
+            System.out.println("sql connect " + results.size());
+        }catch(HibernateException he){
+            System.err.println(he.getLocalizedMessage());
+        }
 
     }
 }
