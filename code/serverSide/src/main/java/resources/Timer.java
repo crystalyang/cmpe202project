@@ -23,6 +23,8 @@ public class Timer {
         this.duration = duration;
     }
 
+    public Timer(){}
+
     public int getDuration(){
         return duration;
     }
