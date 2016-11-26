@@ -1,5 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
 /**
  * This class initiates all objects.
  * 
@@ -9,6 +17,7 @@ import java.util.*;
 public class QuickSortWorld extends World implements Component
 {
     protected boolean started = false;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -46,7 +55,8 @@ public class QuickSortWorld extends World implements Component
             bls[i].getImage().scale(100,120);
             addObject(bls[i],100 + i* 130,450);
         }
- 
+        int[] top3 = getRank(); //get the rank using API call from db
+        //sample [89998,89998,89999] integer in seconds
     }
     
    private GreenfootSound music = new GreenfootSound("music.mp3"); 
@@ -59,4 +69,43 @@ public class QuickSortWorld extends World implements Component
      {  
         music.stop();  
      } 
+     
+    public int[] getRank(){
+        int[] top3 = new int[3];
+        try{
+            //change the path after deployment
+            URL url = new URL("http://localhost:8080/getRank");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "application/json");
+            if (conn.getResponseCode() != 200) {
+			throw new RuntimeException("Failed : HTTP error code : "
+					+ conn.getResponseCode());
+			}
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+			(conn.getInputStream())));
+    		String output;//{"ranks":[89998,89998,89999]} in seconds
+    		
+    		 
+    		while ((output = br.readLine()) != null) {
+    		    output = output.substring(10,output.length()-2);
+    			System.out.println(output);
+    			String[] ranksStr = output.split(",");
+    			top3[0] = Integer.valueOf(ranksStr[0]);
+    			System.out.println(top3[0]);
+    			top3[1] = Integer.valueOf(ranksStr[1]);
+    			System.out.println(top3[1]);
+    			top3[2] = Integer.valueOf(ranksStr[2]);
+    			System.out.println(top3[2]);
+    		}
+    		conn.disconnect();
+        }
+        catch (MalformedURLException e) {
+    		e.printStackTrace();
+        	  } catch (IOException e) {
+        		e.printStackTrace();
+    	  }
+    	  
+    	return top3;
+    }
 }

@@ -10,7 +10,7 @@ public class MyApplication extends Application{
     @Override
     public Restlet getInboundRoot(){
         Router router = new Router();
-        router.attach("/helloword", RankingResource.class);
+        router.attach("/getRank", RankingResource.class);
         return router;
     }
 
