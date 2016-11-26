@@ -31,18 +31,15 @@ public class serverTest {
     @Test
     public void helloWord() throws IOException{
         Representation representation = new ClientResource("http://localhost:8080/helloword").get();
-//        Assert.assertEquals("application/json", representation.getMediaType().toString());
-//        Assert.assertEquals("{\"rank\":\"helloworld\"}", representation.getText());
+        Assert.assertEquals("application/json", representation.getMediaType().toString());
+        Assert.assertEquals("{\"ranks\":\"helloworld\"}", representation.getText());
     }
 
-    @Test
-    public void postRank() throws IOException{
-        ClientResource client  = new ClientResource("http://localhost:8080/helloword");
-        JSONObject rank = new JSONObject();
-        rank.put("rank", "89999");
-        client.post(new JsonRepresentation(rank),MediaType.APPLICATION_JSON);
-
-//        Assert.assertEquals("application/json", representation.getMediaType().toString());
-//        Assert.assertEquals("{\"rank\":\"helloworld\"}", representation.getText());
-    }
+//    @Test
+//    public void postRank() throws IOException{
+//        ClientResource client  = new ClientResource("http://localhost:8080/helloword");
+//        JSONObject rank = new JSONObject();
+//        rank.put("rank", "89998");
+//        client.post(new JsonRepresentation(rank),MediaType.APPLICATION_JSON);
+//    }
 }

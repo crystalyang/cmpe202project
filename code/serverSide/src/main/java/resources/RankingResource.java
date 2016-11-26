@@ -2,6 +2,7 @@ package resources;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.query.*;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.restlet.representation.*;
 import org.restlet.resource.Get;
@@ -18,20 +19,24 @@ import java.util.List;
  */
 public class RankingResource extends ServerResource {
     @Get
-    public void getRank(){
+    public Representation getRank() throws JSONException {
         //dbConnection();
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        try {
-            String hql = "from Timer order by duration desc";
 
-            Query query = session.createQuery(hql);
-            query.setMaxResults(3);
-            List<Timer> results = (List<Timer>) query.list();
-            System.out.println("sql connect " + results.size());
-        }catch(HibernateException he){
-            System.err.println(he.getLocalizedMessage());
-        }
+        String hql = "from Timer order by duration asc";
+
+        Query query = session.createQuery(hql);
+        query.setMaxResults(3);
+        List<Timer> results = (List<Timer>) query.list();
+        int[] top3 = new int[3];
+        top3[0] = results.get(0).getDuration();
+        top3[1] = results.get(1).getDuration();
+        top3[2] = results.get(2).getDuration();
+
+        JSONObject json = new JSONObject();
+        json.put("ranks",top3);
+        return new JsonRepresentation(json);
     }
 
 
@@ -54,20 +59,4 @@ public class RankingResource extends ServerResource {
 
 
     }
-
-//    public void dbConnection(){
-//        Session session = HibernateUtil.getSessionFactory().openSession();
-//        session.beginTransaction();
-//        try {
-//            String hql = "from Timer order by duration desc";
-//
-//            Query query = session.createQuery(hql);
-//            query.setMaxResults(3);
-//            List<Timer> results = (List<Timer>) query.list();
-//            System.out.println("sql connect " + results.size());
-//        }catch(HibernateException he){
-//            System.err.println(he.getLocalizedMessage());
-//        }
-//
-//    }
 }

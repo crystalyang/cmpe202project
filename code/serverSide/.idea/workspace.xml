@@ -56,8 +56,8 @@
       <file leaf-file-name="RankingResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/resources/RankingResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="702">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,8 +128,8 @@
       <file leaf-file-name="serverTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/serverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="675">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,9 +175,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/resources/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/resources/Rank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/resources/RankingResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/resources/Timer.java" />
         <option value="$PROJECT_DIR$/src/test/java/serverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/resources/RankingResource.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
       </list>
     </option>
@@ -910,23 +910,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479937770940</updated>
-      <workItem from="1479937772573" duration="18778000" />
+      <workItem from="1479937772573" duration="20610000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="serverTest - 2016.11.25 at 21h 48m 33s.xml">
-      <configuration name="serverTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="serverTest - 2016.11.25 at 21h 49m 26s.xml">
-      <configuration name="serverTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="serverTest - 2016.11.25 at 21h 49m 59s.xml">
-      <configuration name="serverTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="serverTest - 2016.11.25 at 21h 51m 11s.xml">
-      <configuration name="serverTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="serverTest - 2016.11.25 at 21h 51m 33s.xml">
       <configuration name="serverTest" configurationId="JUnit" />
     </history-entry>
@@ -945,9 +933,21 @@
     <history-entry file="serverTest - 2016.11.25 at 22h 05m 03s.xml">
       <configuration name="serverTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="serverTest - 2016.11.25 at 22h 26m 31s.xml">
+      <configuration name="serverTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="serverTest - 2016.11.25 at 22h 26m 54s.xml">
+      <configuration name="serverTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="serverTest - 2016.11.25 at 22h 27m 59s.xml">
+      <configuration name="serverTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="serverTest - 2016.11.25 at 22h 29m 27s.xml">
+      <configuration name="serverTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18778000" />
+    <option name="totallyTimeSpent" value="20610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="142" width="2371" height="1298" extended-state="0" />
@@ -1090,6 +1090,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/serverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/resources/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1104,18 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/resources/RankingResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/serverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="702">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
