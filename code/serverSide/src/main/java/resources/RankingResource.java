@@ -19,31 +19,55 @@ import java.util.List;
 public class RankingResource extends ServerResource {
     @Get
     public void getRank(){
-        dbConnection();
+        //dbConnection();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        try {
+            String hql = "from Timer order by duration desc";
+
+            Query query = session.createQuery(hql);
+            query.setMaxResults(3);
+            List<Timer> results = (List<Timer>) query.list();
+            System.out.println("sql connect " + results.size());
+        }catch(HibernateException he){
+            System.err.println(he.getLocalizedMessage());
+        }
     }
+
 
     @Post
     public void  post_request(JsonRepresentation jsonRep) throws IOException{
+
+
+
         JSONObject json = jsonRep.getJsonObject() ;
-        String action = json.getString("rank") ;
+        int action =Integer.valueOf(json.getString("rank"));
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        Timer timer = new Timer(action);
+        session.save(timer);
+        session.getTransaction().commit();
+
         System.out.println(action);
 
 
 
     }
 
-    public void dbConnection(){
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        try {
-            String hql = "from Timer ";
-
-            Query query = session.createQuery(hql);
-            List<Timer> results = (List<Timer>) query.list();
-            System.out.println("sql connect " + results.size());
-        }catch(HibernateException he){
-            System.err.println(he.getLocalizedMessage());
-        }
-
-    }
+//    public void dbConnection(){
+//        Session session = HibernateUtil.getSessionFactory().openSession();
+//        session.beginTransaction();
+//        try {
+//            String hql = "from Timer order by duration desc";
+//
+//            Query query = session.createQuery(hql);
+//            query.setMaxResults(3);
+//            List<Timer> results = (List<Timer>) query.list();
+//            System.out.println("sql connect " + results.size());
+//        }catch(HibernateException he){
+//            System.err.println(he.getLocalizedMessage());
+//        }
+//
+//    }
 }

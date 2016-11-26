@@ -18,8 +18,8 @@ public class Timer {
     private int duration; //record as seconds
 
 
-    public Timer(int idtimer, int duration){
-        this.idtimer = idtimer;
+    public Timer(int duration){
+
         this.duration = duration;
     }
 

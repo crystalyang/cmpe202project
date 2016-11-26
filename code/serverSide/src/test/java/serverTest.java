@@ -39,7 +39,7 @@ public class serverTest {
     public void postRank() throws IOException{
         ClientResource client  = new ClientResource("http://localhost:8080/helloword");
         JSONObject rank = new JSONObject();
-        rank.put("rank", "5");
+        rank.put("rank", "89999");
         client.post(new JsonRepresentation(rank),MediaType.APPLICATION_JSON);
 
 //        Assert.assertEquals("application/json", representation.getMediaType().toString());
