@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=c\ item
+comment0.target=Music(Component,\ Item)
+comment1.params=
+comment1.target=double\ calculatePrice()
+comment2.params=
+comment2.target=double\ addedPrice()
+comment3.params=
+comment3.target=double\ calculateTax()
+comment4.params=
+comment4.target=double\ addedTax()
+comment5.params=
+comment5.target=void\ printDescription()
+numComments=6
