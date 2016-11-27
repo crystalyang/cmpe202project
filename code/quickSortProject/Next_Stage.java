@@ -79,6 +79,11 @@ public class Next_Stage extends Button
             else{
             //message to alert user to click next stage
                 if(s.get_swap_check()==c.result.size()){
+                    int endTime = (int)((System.currentTimeMillis()/1000)%3600);
+                    System.out.println(endTime);
+                    System.out.println(world.startTime);
+                    int diff = endTime - world.startTime;
+
                     msg.sayGameSucceed();
                     Greenfoot.stop();
                 }
