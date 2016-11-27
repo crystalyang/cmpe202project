@@ -90,7 +90,7 @@ public class Next_Stage extends Button
                     //System.out.println(endTime);
                     System.out.println(world.startTime);
                     int diff = endTime - world.startTime;
-                    saveGameRank(diff);
+                    //saveGameRank(diff);
                     msg.sayGameSucceed();
                     Greenfoot.stop();
                 }
