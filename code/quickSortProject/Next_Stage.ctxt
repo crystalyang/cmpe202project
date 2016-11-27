@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=boolean\ pass()
 comment7.params=request
 comment7.target=void\ handleRequest(java.lang.String)
-numComments=8
+comment8.params=diff
+comment8.target=void\ saveGameRank(int)
+numComments=9

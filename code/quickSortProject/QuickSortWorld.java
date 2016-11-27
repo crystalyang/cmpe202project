@@ -17,7 +17,7 @@ import java.net.URL;
 public class QuickSortWorld extends World implements Component
 {
     protected boolean started = false;
-    
+    public int startTime; // update after click the start button, record in sec
     /**
      * Constructor for objects of class MyWorld.
      * 

@@ -50,6 +50,8 @@ public class Start extends Button
      if(Greenfoot.mouseClicked(this)) {
             //System.out.print("1");
             QuickSortWorld world=(QuickSortWorld)getWorld();
+            world.startTime = (int)((System.currentTimeMillis()/1000)%3600);
+            System.out.println(world.startTime);
             List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
             if(world.started == false){
                 

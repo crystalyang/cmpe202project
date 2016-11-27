@@ -1,5 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.OutputStream;
+import java.io.BufferedWriter;
 /**
  * Write a description of class Next_Stage here.
  * 
@@ -79,6 +86,11 @@ public class Next_Stage extends Button
             else{
             //message to alert user to click next stage
                 if(s.get_swap_check()==c.result.size()){
+                    int endTime = (int)((System.currentTimeMillis()/1000)%3600);
+                    //System.out.println(endTime);
+                    System.out.println(world.startTime);
+                    int diff = endTime - world.startTime;
+                    //saveGameRank(diff);
                     msg.sayGameSucceed();
                     Greenfoot.stop();
                 }
@@ -122,6 +134,34 @@ public class Next_Stage extends Button
     public  void handleRequest(String request){
     } 
     
+    public void saveGameRank(int diff){
+        try{
+            URL url = new URL("http://localhost:8080/getRank");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+            OutputStream os = conn.getOutputStream();
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os));
+            String req = "{rank:" + diff + "}";
+            writer.write(req);
+            writer.flush();
+            writer.close();
+            os.close();
+            
+            int responseCode = conn.getResponseCode();
+            if(responseCode == 200){
+                System.out.println("saved score");
+            }
+            
+        }catch (MalformedURLException e) {
+    		e.printStackTrace();
+        	  } catch (IOException e) {
+        		e.printStackTrace();
+    	  }
+    }
 
         
     
