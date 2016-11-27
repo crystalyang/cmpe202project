@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="connection.url">jdbc:mysql://gameranking.c3vlb2ifgs0t.us-west-2.rds.amazonaws.com:3306/gameRanking</property>
+        <property name="connection.url">hide path</property>
         <property name="connection.username">masterCrystal</property>
         <property name="connection.password">masterpassword</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>

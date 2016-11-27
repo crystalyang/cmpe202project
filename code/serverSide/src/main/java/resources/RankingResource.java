@@ -46,7 +46,8 @@ public class RankingResource extends ServerResource {
 
 
         JSONObject json = jsonRep.getJsonObject() ;
-        int action =Integer.valueOf(json.getString("rank"));
+        System.out.println(json);
+        int action =json.getInt("rank");
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
