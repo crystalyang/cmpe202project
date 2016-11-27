@@ -44,7 +44,7 @@ public class Number extends Actor
     //when the number is clicked, renew the clicked attribute, Aim to choose i, choose j
     public void checkClicked(){
     
-   if(Greenfoot.mouseClicked(this)) {
+       if(Greenfoot.mouseClicked(this)) {
        clicked=true; 
        }
     }

@@ -20,9 +20,10 @@ public class AdapteeObject extends Actor implements Adaptee
         img_m = this.getImage();
         img_m.clear();
         this.setImage("msg.png");
-        
+        this.getImage().scale(400,400);
+       
         this.getImage().setFont(new Font("AppleGothic", Font.PLAIN, 16));
-        this.getImage().drawString(s,30,80);
+        this.getImage().drawString(s,0,20);
 
     }    
 }

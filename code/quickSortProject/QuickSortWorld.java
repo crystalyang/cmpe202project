@@ -71,7 +71,7 @@ public class QuickSortWorld extends World implements Component
      {  
         music.stop();  
      } 
-     
+    
     public int[] getRank(){
         int[] top3 = new int[3];
         try{
@@ -110,4 +110,5 @@ public class QuickSortWorld extends World implements Component
     	  
     	return top3;
     }
+
 }

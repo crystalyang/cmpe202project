@@ -26,13 +26,16 @@ public class Message extends Actor implements Target
     
     public Message(){
         adaptee=new AdapteeObject();
+        this.setImage("msg.png");
+        this.getImage().scale(400,400);
     }
     
     
 
     public void sayChooseIJ(){
         QuickSortWorld world=(QuickSortWorld)getWorld();
-        world.addObject(adaptee, 500, 680);
+        //this.getImage().scale(300,300);
+        world.addObject(adaptee, 340, 920);
         adaptee.printMessage("Choose a number: click number then click  \n\"Select i\" or \"Select j\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
     }
     
@@ -87,7 +90,8 @@ public class Message extends Actor implements Target
     public Message(String m){
         img_m = this.getImage();
         img_m.setFont(new java.awt.Font("AppleGothic", java.awt.Font.PLAIN, 16));
-        img_m.drawString(m,30,80);
+        img_m.scale(400,400);
+        img_m.drawString(m,0,20);
         setImage(img_m);
         content = m;
     }
@@ -96,9 +100,9 @@ public class Message extends Actor implements Target
         img_m = this.getImage();
         img_m.clear();
         this.setImage("msg.png");
-        
+        this.getImage().scale(400,400);
         this.getImage().setFont(new Font("AppleGothic", Font.PLAIN, 16));
-        this.getImage().drawString(m,30,80);
+        this.getImage().drawString(m,0,20);
         content = m;
         //other color/font
     }
