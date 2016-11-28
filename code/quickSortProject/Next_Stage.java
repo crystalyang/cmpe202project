@@ -1,5 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.OutputStream;
+import java.io.BufferedWriter;
 /**
  * Write a description of class Next_Stage here.
  * 
@@ -17,7 +24,6 @@ public class Next_Stage extends Button
     public boolean stage_control=true;
     public boolean before_next=false;
     public void initial(Button ns){
-        //ButtonLeaf ns = new Next_Stage();
         ns.setImage("nextstage.png");
         ns.getImage().scale(100,120);
     }
@@ -74,16 +80,23 @@ public class Next_Stage extends Button
                 }
                 this.stage = this.stage+1;
                 stage_control=true;
-                msg.setContent("Go on with another i and j. \n Choose between J and pivot now.");
+                msg.sayChooseIJ();
+                
             }
             else{
             //message to alert user to click next stage
                 if(s.get_swap_check()==c.result.size()){
-                    msg.setContent("Congratulations! Quick Sort is completed!");
+                    int endTime = (int)((System.currentTimeMillis()/1000)%3600);
+                    //System.out.println(endTime);
+                    System.out.println(world.startTime);
+                    int diff = endTime - world.startTime;
+                    //saveGameRank(diff);
+                    msg.sayGameSucceed();
+                    Greenfoot.stop();
                 }
                 else{
                     stage_control=false;
-                    msg.setContent("You are ready for the next stage! \n\n  Click the Next Stage Button");
+                    msg.sayReadyForNextStage(); 
                 }
                 
             }
@@ -91,7 +104,8 @@ public class Next_Stage extends Button
         else{
             if(Greenfoot.mouseClicked(this)){
                 //error message
-                msg.setContent("You are not ready for the next stage!");
+                msg.sayNotReadyForNextStage();
+                //msg.setContent("You are not ready for the next stage!");
             }
             
         }
@@ -108,9 +122,7 @@ public class Next_Stage extends Button
             return true;
         }
         else{
-            //int[] arr = c.result.get(0);
-            //if(arr[1]==c.pivots.get(0) || (s.swap_check>0 && s.swap_check==c.stage_alert.get(this.stage)-1)){
-            if(s.get_swap_check()>0 && s.get_swap_check()==(c.stage_alert.get(this.stage))-1){
+             if(s.get_swap_check()>0 && s.get_swap_check()==(c.stage_alert.get(this.stage))-1){
                 before_next=true;
             }
             return false;
@@ -122,6 +134,34 @@ public class Next_Stage extends Button
     public  void handleRequest(String request){
     } 
     
+    public void saveGameRank(int diff){
+        try{
+            URL url = new URL("http://localhost:8080/getRank");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+            OutputStream os = conn.getOutputStream();
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os));
+            String req = "{rank:" + diff + "}";
+            writer.write(req);
+            writer.flush();
+            writer.close();
+            os.close();
+            
+            int responseCode = conn.getResponseCode();
+            if(responseCode == 200){
+                System.out.println("saved score");
+            }
+            
+        }catch (MalformedURLException e) {
+    		e.printStackTrace();
+        	  } catch (IOException e) {
+        		e.printStackTrace();
+    	  }
+    }
 
         
     

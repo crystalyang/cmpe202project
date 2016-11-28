@@ -18,7 +18,6 @@ public class Start extends Button
     
     //@Override
     public void initial(Button start){
-        //ButtonLeaf start = new Start();
         start.setImage("start.png");
         start.getImage().scale(100,120);
     }
@@ -27,7 +26,6 @@ public class Start extends Button
     {
         // Add your action code here.
         clicked();
-        //QuickSortWorld world=(QuickSortWorld)getWorld();
       
         if(mouseOnObject(this)) {
             this.setImage("start_p.png");
@@ -50,17 +48,15 @@ public class Start extends Button
     
      public void clicked(){
      if(Greenfoot.mouseClicked(this)) {
-             QuickSortWorld world=(QuickSortWorld)getWorld();
+            //System.out.print("1");
+            QuickSortWorld world=(QuickSortWorld)getWorld();
+            world.startTime = (int)((System.currentTimeMillis()/1000)%3600);
+            System.out.println(world.startTime);
             List<QuickSort> qs=getObjectsInRange(500,QuickSort.class);
-            //qs.get(0).addedToWorldNextLine();
             if(world.started == false){
-                //int index=0;
-                //for(int j=0;j<8;j++){
-                    //setPos(index++, j+1, world);
-                //}
                 
                 QuickSort quickSort = new QuickSort();
-                world.addObject(quickSort, 367, 237);
+                world.addObject(quickSort, 0, 0);
                 quickSort.addedToWorld();
                 world.started = true;
              
@@ -77,6 +73,15 @@ public class Start extends Button
                 m_j.getImage().scale(50,100);
                 world.addObject(m_j,100,100);
                 
+                Instruction ins = new Instruction();
+                ins.setImage("ins.png");
+                ins.getImage().scale(240,120);
+                world.addObject(ins,250,620);
+                Rank rank = new Rank();
+                rank.setImage("rank.png");
+                rank.getImage().scale(240,120);
+                world.addObject(rank,750,620);
+
                 Chance chance1 = new Chance();
                 chance1.setImage("chance.png");
                 chance1.getImage().scale(30,30);
@@ -102,42 +107,44 @@ public class Start extends Button
                 chance5.getImage().scale(30,30);
                 world.addObject(chance5,620,550);
                 chance_list.add(chance5);
-                
-                Message msg = new Message("Choose a number: click number then click  \n\"Select i\" or \"Select j\". I is before J.\nJ is smaller than pivot. I is reverse.\nTry to find the rule. Good Luck!");
-                //msg.setImage("msg.png");
-                //msg.getImage().scale(msg.getImage().getWidth()-35,msg.getImage().getHeight()-100);
-                world.addObject(msg, 500, 680);
 
+                Message msg=new Message();  
+                msg.getImage().scale(400,400);
+                world.addObject(msg, 340, 920);
+                msg.sayChooseIJ();
+                
+               
+                //int[] rank_number = world.getRank();
+                int[] rank_i = new int[3];
+                int[] remaining = new int[3];
+                String rank_s = "";
+                /*
+                for(int i=0; i<rank_number.length; i++){                     
+                    remaining[i] = rank_number[i]%60;
+                    rank_i[i] = rank_number[i]/60;
+                    rank_s += "Top"+ (i+1) + ": "+rank_i[i] + " min  " + remaining[i] + " sec\n";
+                    System.out.println("function number"+rank_number[i]);
+                    System.out.println("min number"+remaining[i]);
+                    System.out.println("sec number"+rank_i[i]);
+                } */
+                int i, j;
+                i=10000;
+                j=50;
+                remaining[0] = i%60;
+                rank_i[0] = i/60;
+                remaining[1] = j%60;
+                rank_i[1] = j/60;
+                rank_s += "1st: "+rank_i[0] + " min  " + remaining[0] + " sec\n\n" + "2nd: "+ rank_i[1] + " min  " + remaining[1] + " sec\n\n"+"3rd: 2 min  30 sec";
+                Message rank_msg = new Message(rank_s);
+                world.addObject(rank_msg,850,920);
+                
                 Controller controller = new Controller();
                 world.addObject(controller,1,1);
-
-                
-                //List<Message> message=world.getObjectsInRange(1000,Message.class);
-                
                 
             }
         }
     }
-    
-    // clean up later
-    // public void addedToWorldNextLine(){
-        // QuickSortWorld world=(QuickSortWorld)getWorld();
-        // int index=0;
-        // for(int j=0;j<8;j++){
-            // setPos(index++, j+1, world);
-        // }
-    // }
-   
-    
-    //public void setPos(int index, int i, World world) {
-           // Position pos = new Position(index);
-            //pos.setImage(pos.getFile());
-           // GreenfootImage posImg = pos.getImage();
-           // posImg.scale(posImg.getWidth() - 660, posImg.getHeight() - 625);
-            //world.addObject(pos, 110 * i, 250);
-   // }
-    
-    
+
     
     public void setNums(int index, int i, World world){
         

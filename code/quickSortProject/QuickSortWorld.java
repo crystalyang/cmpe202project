@@ -1,5 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
 /**
  * This class initiates all objects.
  * 
@@ -9,6 +17,7 @@ import java.util.*;
 public class QuickSortWorld extends World implements Component
 {
     protected boolean started = false;
+    public int startTime; // update after click the start button, record in sec
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -23,87 +32,83 @@ public class QuickSortWorld extends World implements Component
         // do nothing 
     }
     private void prepare(){
-        /*
-        Button[] bls = new Button[7];
-        bls[0] = new Start();
-        bls[1] = new Reset();
-        bls[2] = new Choose_i();
-        bls[3] = new Choose_j();
-        bls[4] = new Swap();
-        bls[5] = new Next_Stage();
-        bls[6] = new Tutorial();
-        */
-        //List<Button> bls2 = new ArrayList<Button>();
+
         ButtonFactory bf = new ButtonFactory();
         FactoryPart[] bls = new FactoryPart[7];
         bls[0] = bf.getStart();
+        bls[0].setImage("start.png");
         bls[1] = bf.getReset();
+        bls[1].setImage("reset.png");
         bls[2] = bf.getChoose_i();
+        bls[2].setImage("choosei.png");
         bls[3] = bf.getChoose_j();
+        bls[3].setImage("choosej.png");
         bls[4] = bf.getSwap();
+        bls[4].setImage("swap.png");
         bls[5] = bf.getNext_Stage();
+        bls[5].setImage("nextstage.png");
         bls[6] = bf.getTutorial();
-        
-        // Swap swap=(Swap)bls[4];
-        // Next_Stage ns=(Next_Stage)bls[5];
-        
-        // swap.setSuccessor(ns);
+        bls[6].setImage("tutorial.png");
         
         for(int i = 0; i < bls.length;i++){
             bls[i].initial(bls[i]);
+            bls[i].getImage().scale(100,120);
             addObject(bls[i],100 + i* 130,450);
         }
-        
-        //Facade facade = new Facade();  
-        //facade.Method();
-        
-        
-        Music music =new Music();
-        addObject(music,35,40);
-        //QuickSort quickSort = new QuickSort();
-        //addObject(quickSort, 367, 237);
-       // quickSort.addedToWorld();
-        
-        /*Start start=new Start();
-        start.setImage("start.png");
-        start.getImage().scale(100,120);
-        addObject(start,100,450);
-        Reset reset = new Reset();
-        reset.setImage("reset.png");
-        reset.getImage().scale(100,120);
-        addObject(reset,230,450);
-        Choose_i c_i = new Choose_i();
-        c_i.setImage("choosei.png");
-        c_i.getImage().scale(100,120);
-        addObject(c_i,360,450);
-        Choose_j c_j = new Choose_j();
-        c_j.setImage("choosej.png");
-        c_j.getImage().scale(100,120);
-        addObject(c_j,490,450);
-        Swap swap = new Swap();
-        swap.setImage("swap.png");
-        swap.getImage().scale(100,120);
-        addObject(swap,620,450);
-        Next_Stage ns = new Next_Stage();
-        ns.setImage("nextstage.png");
-        ns.getImage().scale(100,120);
-        addObject(ns,750,450);
-        Tutorial t = new Tutorial();
-        t.setImage("tutorial.png");
-        t.getImage().scale(100,120);
-        addObject(t,880,450);*/
-        
-        
+        //int[] top3 = getRank(); //get the rank using API call from db
+        //for sample purpose
+        int[] top3 = new int[]{89998,89998,89999};
+        //sample [89998,89998,89999] integer in seconds
     }
     
-   // private GreenfootSound music = new GreenfootSound("music.mp3"); 
-   // public void started()  
-   // {  
-       // music.playLoop();  
-    // }  
+   private GreenfootSound music = new GreenfootSound("music.mp3"); 
+   public void started()  
+   {  
+        music.playLoop();  
+   }  
    
-    // public void stopped()  
-    // {  
-        // music.stop();  
-    // } 
+    public void stopped()  
+     {  
+        music.stop();  
+     } 
+    
+    public int[] getRank(){
+        int[] top3 = new int[3];
+        try{
+            //change the path after deployment
+            URL url = new URL("http://localhost:8080/getRank");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "application/json");
+            if (conn.getResponseCode() != 200) {
+			throw new RuntimeException("Failed : HTTP error code : "
+					+ conn.getResponseCode());
+			}
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+			(conn.getInputStream())));
+    		String output;//{"ranks":[89998,89998,89999]} in seconds
+    		
+    		 
+    		while ((output = br.readLine()) != null) {
+    		    output = output.substring(10,output.length()-2);
+    			System.out.println(output);
+    			String[] ranksStr = output.split(",");
+    			top3[0] = Integer.valueOf(ranksStr[0]);
+    			System.out.println(top3[0]);
+    			top3[1] = Integer.valueOf(ranksStr[1]);
+    			System.out.println(top3[1]);
+    			top3[2] = Integer.valueOf(ranksStr[2]);
+    			System.out.println(top3[2]);
+    		}
+    		conn.disconnect();
+        }
+        catch (MalformedURLException e) {
+    		e.printStackTrace();
+        	  } catch (IOException e) {
+        		e.printStackTrace();
+    	  }
+    	  
+    	return top3;
+    }
+
 }

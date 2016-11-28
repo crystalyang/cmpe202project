@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=Decorator(Component)
+comment1.params=
+comment1.target=double\ calculatePrice()
+comment2.params=
+comment2.target=double\ calculateTax()
+comment3.params=
+comment3.target=void\ printDescription()
+numComments=4

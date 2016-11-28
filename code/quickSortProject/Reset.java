@@ -13,12 +13,16 @@ public class Reset extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void initial(Button reset){
-        //ButtonLeaf reset = new Reset();
         reset.setImage("reset.png");
         reset.getImage().scale(100,120);
     }
     public void act() 
     {
+        if(Greenfoot.mouseClicked(this)) {
+            Greenfoot.setWorld(new QuickSortWorld());
+             
+        }// Add your action code here.
+        
         QuickSortWorld world=(QuickSortWorld)getWorld();
         if(!(world==null) && !world.getObjects(QuickSort.class).isEmpty()){
             if(mouseOnObject(this)) {
@@ -31,10 +35,7 @@ public class Reset extends Button
             } 
         }
         
-        if(Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new QuickSortWorld());
-             
-        }// Add your action code here.
+        
     }    
     
 }
