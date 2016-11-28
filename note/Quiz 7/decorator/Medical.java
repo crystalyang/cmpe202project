@@ -7,9 +7,9 @@ public class Medical extends Decorator {
     private String description;
     private double taxPrice; // the price for all the items including tax
     private double tax; //the tax for all the items
-    DecimalFormat fmt = new DecimalFormat("0.00");
     private double importTaxRate=0.00;
     private double basicTaxRate=0.00;
+    private DecimalFormat fmt = new DecimalFormat("0.00");
 
     public Medical( Component c, Item item )
     {
@@ -22,29 +22,36 @@ public class Medical extends Decorator {
         taxPrice=addedPrice();
     }
 
-    public double calculatePrice()
+   public double calculatePrice()
     {
         double beforePrice=super.calculatePrice();
-        return beforePrice+taxPrice;
+        double result=beforePrice+taxPrice;
+        return result;
     }
 
     public double addedPrice( ){
-        return quantity*price+tax;
+        double result=quantity*price+tax;
+        return result;
     }
 
     public double calculateTax(){
         double beforeTax=super.calculateTax();
-        return beforeTax+tax;
+        double result=beforeTax+tax;
+        return result;
     }
 
     public double addedTax(){
-        return price*quantity*(importTaxRate+basicTaxRate);
+        double result=price*quantity*(importTaxRate+basicTaxRate);
+        return result;
     }
 
     public void printDescription() 
     { 
         super.printDescription();
-        System.out.println(description+": "+fmt.format(taxPrice));
+        System.out.println(description+": "+fmt.format(formatDouble(taxPrice)));
     }
-
+    
+    public double formatDouble(double d){
+        return (double)Math.round(d*100)/100.0;
+    }
 }

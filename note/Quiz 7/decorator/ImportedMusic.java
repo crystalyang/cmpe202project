@@ -25,26 +25,33 @@ public class ImportedMusic extends Decorator {
     public double calculatePrice()
     {
         double beforePrice=super.calculatePrice();
-        return beforePrice+taxPrice;
+        double result=beforePrice+taxPrice;
+        return result;
     }
 
     public double addedPrice( ){
-        return quantity*price+tax;
+        double result=quantity*price+tax;
+        return result;
     }
 
     public double calculateTax(){
         double beforeTax=super.calculateTax();
-        return beforeTax+tax;
+        double result=beforeTax+tax;
+        return result;
     }
 
     public double addedTax(){
-        return price*quantity*(importTaxRate+basicTaxRate);
+        double result=price*quantity*(importTaxRate+basicTaxRate);
+        return result;
     }
 
     public void printDescription() 
     { 
         super.printDescription();
-        System.out.println(description+": "+fmt.format(taxPrice));
+        System.out.println(description+": "+fmt.format(formatDouble(taxPrice)));
     }
-
+    
+    public double formatDouble(double d){
+        return (double)Math.round(d*100)/100.0;
+    }
 }
