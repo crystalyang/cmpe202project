@@ -2,5 +2,5 @@
 comment0.params=d
 comment0.target=double\ formatDouble(double)
 comment1.params=args
-comment1.target=void\ main(java.lang.String[])
+comment1.target=void\ runTest(java.lang.String[])
 numComments=2

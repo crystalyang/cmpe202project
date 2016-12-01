@@ -7,7 +7,7 @@ import org.restlet.resource.ClientResource;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Helloworld {
+public class Test {
     static final String BASE_URI = "http://aws.nguyenresearch.com:8080/cart";
     static final DecimalFormat fmt = new DecimalFormat("0.00");
 
@@ -15,7 +15,7 @@ public class Helloworld {
         return (double)Math.round(d*100)/100.;
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void runTest(String[] args) throws Exception {
         ClientResource client=new ClientResource(BASE_URI);
         Representation result_string = client.get();
 
