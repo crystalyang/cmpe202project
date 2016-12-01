@@ -115,6 +115,8 @@ public class Start extends Button
                 
                
                 //int[] rank_number = world.getRank();
+                
+                
                 int[] rank_i = new int[3];
                 int[] remaining = new int[3];
                 String rank_s = "";

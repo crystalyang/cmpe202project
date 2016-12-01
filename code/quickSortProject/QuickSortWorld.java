@@ -18,6 +18,7 @@ public class QuickSortWorld extends World implements Component
 {
     protected boolean started = false;
     public int startTime; // update after click the start button, record in sec
+    public int[] top3;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -57,7 +58,7 @@ public class QuickSortWorld extends World implements Component
         }
         //int[] top3 = getRank(); //get the rank using API call from db
         //for sample purpose
-        int[] top3 = new int[]{89998,89998,89999};
+        top3 = new int[]{89998,89998,89999};
         //sample [89998,89998,89999] integer in seconds
     }
     
