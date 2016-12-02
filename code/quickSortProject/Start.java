@@ -129,14 +129,17 @@ public class Start extends Button
                     System.out.println("min number"+remaining[i]);
                     System.out.println("sec number"+rank_i[i]);
                 } */
-                int i, j;
-                i=10000;
-                j=50;
-                remaining[0] = i%60;
-                rank_i[0] = i/60;
-                remaining[1] = j%60;
-                rank_i[1] = j/60;
-                rank_s += "1st: "+rank_i[0] + " min  " + remaining[0] + " sec\n\n" + "2nd: "+ rank_i[1] + " min  " + remaining[1] + " sec\n\n"+"3rd: 2 min  30 sec";
+                int[] top = world.top3;
+                int top1=top[0];
+                int top2=top[1];
+                int top3=top[2];
+                remaining[0] = (top1)%60;
+                rank_i[0] = (top1)/60;
+                remaining[1] = (top2)%60;
+                rank_i[1] = (top2)/60;
+                remaining[2] = (top3)%60;
+                rank_i[2] = (top3)/60;
+                rank_s += "1st: "+rank_i[0] + " min  " + remaining[0] + " sec\n\n" + "2nd: "+ rank_i[1] + " min  " + remaining[1] + " sec\n\n"+"3rd: "+rank_i[2] + " min  " + remaining[2] + " sec\n\n";
                 Message rank_msg = new Message(rank_s);
                 world.addObject(rank_msg,850,920);
                 
