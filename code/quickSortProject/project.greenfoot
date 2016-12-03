@@ -361,10 +361,17 @@ editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 editor.swing.0.height=0
 editor.swing.0.width=0
 editor.swing.0.x=0
 editor.swing.0.y=23
+=======
+editor.swing.0.height=797
+editor.swing.0.width=700
+editor.swing.0.x=151
+editor.swing.0.y=50
+>>>>>>> mengxuan_cai
 editor.swing.1.height=739
 editor.swing.1.width=701
 editor.swing.1.x=2242
@@ -373,10 +380,17 @@ editor.swing.2.height=700
 editor.swing.2.width=701
 editor.swing.2.x=2416
 editor.swing.2.y=-78
+<<<<<<< HEAD
 mainWindow.height=1006
 mainWindow.width=1336
 mainWindow.x=1864
 mainWindow.y=-250
+=======
+mainWindow.height=797
+mainWindow.width=1229
+mainWindow.x=2
+mainWindow.y=23
+>>>>>>> mengxuan_cai
 package.numDependencies=103
 package.numTargets=34
 project.charset=UTF-8
